@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.footer {
+    width: 100%;
+    height: 40vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer .social-box {
+    width: 100%;
+    height: 5vh;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+.footer .containerFooter {
+    width: 80%;
+    height: 70%;
+    margin:auto;
+    margin-top: 5vh;
+    display: flex;
+}
+
+.footer .containerFooter  .boxFooter {
+    width: 33.3%;
+    margin: auto;
+    height: 100%;
+}
+
+.footer .containerFooter .boxFooter  h2 {
+    font-size: 20px;
+    margin-left: 4vh;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: rgb(48, 46, 46);
+    text-align: left;
+}
+
+.footer .containerFooter .boxFooter ul {
+    margin-top: 2vh;
+}
+
+.footer .containerFooter .boxFooter ul li {
+    list-style: none;
+    font-weight: 300;
+    text-align: left;
+    margin-top: .5vh;
+}
+.footer .containerFooter .boxFooter ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+}
+.footer .containerFooter .boxFooter ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.footer .containerFooter .boxFooter ul  .redes {
+    display: flex;
+    margin-top: 1vh;
+}
+
+.footer .containerFooter .boxFooter ul .redes img {
+    margin-right: 2vh;
+    opacity: .7;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        height: auto;
+    }
+
+    .footer .containerFooter {
+            width: 100%;
+            display: inline-block;
+            
+    }
+    .footer .containerFooter .boxFooter {
+            width: 90%;
+            height: auto;
+            margin: auto;
+            margin-top: 2vh;
+            padding-bottom: 10px;
+    }
+}
+    

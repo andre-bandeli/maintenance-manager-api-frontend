@@ -4,6 +4,7 @@ import Login from './pages/login/Login';
 import { Route, Routes, useLocation } from "react-router-dom"
 import React, { useEffect } from 'react';
 import Index from './pages/index/Index';
+import Cadastro from './pages/cadastro/Cadastro';
 
 function App() {
 
@@ -18,6 +19,9 @@ function App() {
       case '/login':
         title = 'Login';
         break;
+      case '/cadastro':
+        title = 'Cadastro';
+        break;
       default:
         title = 'Planejador de Manutenção Online';
         break;
@@ -29,6 +33,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/cadastro" element={<Cadastro />} />
   </Routes>
   );
 }

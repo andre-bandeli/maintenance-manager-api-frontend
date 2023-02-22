@@ -1,0 +1,360 @@
+
+.login {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+
+
+    .container-forms {
+        width: 50%;
+        height: 50vh;
+        margin-top: 15vh;
+        backdrop-filter: blur( 13.5px );
+        -webkit-backdrop-filter: blur( 10.5px );
+        border-radius: 0px;
+        border-bottom-left-radius: 10px;
+        background-color: rgb(53, 54, 54);
+        background-image: linear-gradient(to right top, #1c1d1f81, #1a1e22b0, #162025, #112127, #0b2327);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        .title {
+            display: flex;
+            margin-top: 5vh;
+            h1 {
+                font-size: 30px;
+                color: rgb(4, 197, 223);
+                margin-left: 5vh;
+            }
+    
+            h2 {
+                font-size: 25px;
+                color: rgb(97, 95, 91);
+                margin-left: 5vh;
+                margin-top: .5vh;
+            }
+            h2:hover {
+                color: whitesmoke;
+            }
+        }
+
+        .forms {
+            margin-top: 2vh;
+            .username {
+                margin-top: 5vh;
+                width: 90%;
+                height: 10vh;
+                margin: auto;
+                color: white;
+                font-size: 22px;
+
+                input {
+                    margin-left: 0vh;
+                    width: 500px;
+                    height: 30px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    border: 2px solid rgb(4, 197, 223);
+                    margin-top: 2vh;
+                    color: whitesmoke;
+                }
+
+                @media (max-width: 1024px) {
+                    input {
+                        width: 300px;
+                    }
+                }
+                @media (max-width: 550px) {
+                    label {
+                        margin-left: 3vh;
+                        font-size: 18px;
+                    }
+                    input {
+                        margin-left: 3vh;
+                        font-size: 15px;
+                    }
+                }
+                @media (max-width: 450px) {
+                    input {
+                        width: 200px;
+                    }
+                }
+            }
+            .password {
+                margin-top: 5vh;
+                width: 90%;
+                height: 5vh;
+                margin: auto;
+                color: white;
+                font-size: 22px;
+
+                input {
+                    margin-left: 0vh;
+                    width: 500px;
+                    height: 30px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    border: 2px solid rgb(4, 197, 223);
+                    margin-top: 2vh;
+                    color: whitesmoke;
+                }
+                @media (max-width: 1024px) {
+                    input {
+                        width: 300px;
+                    }
+                }
+                @media (max-width: 550px) {
+                    label {
+                        margin-left: 3vh;
+                        font-size: 18px;
+                    }
+                    input {
+                        margin-left: 3vh;
+                        font-size: 15px;
+                    }
+                }
+                @media (max-width: 450px) {
+                    input {
+                        width: 200px;
+                    }
+                }
+            }
+
+            button {
+                margin-left: 5vh;
+                margin-top: 7vh;
+                width: 170px;
+                height: 30px;
+                border: 2px solid white;
+                background-color: transparent;
+                border-radius: 10px;
+                cursor: pointer;
+                color: whitesmoke;
+            }
+            button:hover {
+                background-color: whitesmoke;
+                color: black;
+            }
+        }
+
+        
+    }
+    @media (max-width: 1024px) and (max-height: 600px) {
+        .container-forms {
+            height: 68vh;
+        
+            .forms {
+
+                .username {
+                    height: auto;
+                    input {
+                        font-size: 16px;
+                    }
+                }
+                .password {
+                    input {
+                        font-size: 16px;
+                    }
+                }
+                button {
+                    margin-top: 15vh;
+                }
+            }
+        }
+    }
+
+    .container-text {
+        width: 50%;
+        height: 80vh;
+        margin-top: 5vh;
+        h1 {
+            margin-left: 20vh;
+            margin-top: 20vh;
+            width: 60%;
+            font-size: 50px;
+
+        }
+        h2 {
+            margin-left: 20vh;
+            margin-top: 2vh;
+            width: 60%;
+            font-size: 25px;
+            font-weight: 300;
+        }
+
+
+        
+    }
+    
+}
+
+@media (max-width: 1440px) {
+    
+.login {
+
+    .container-text {
+
+        h1 {
+            margin-top: 15vh;
+
+        }
+    }
+}
+}
+
+@media (max-width: 1024px) {
+    
+    .login {
+    
+        .container-text {
+    
+            h1 {
+                margin-left: 5vh;
+                margin-top: 17vh;
+    
+            }
+            h2 {
+                width: 80%;
+                margin-top: 5vh;
+                margin-left: 5vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    
+.login {
+    display: inline-block;
+    height: auto;
+    .container-forms {
+        position: relative;
+        width: 80%;
+        margin: auto;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+
+        .title {
+            h1 {
+                margin-top: 1vh;
+            }
+            h2 {
+                margin-top: 2vh;
+            }
+        }
+    }
+
+    .container-text {
+        width: 100%;
+        height: auto;
+        margin-top: 15vh;
+        position: relative;
+
+
+        h1 {
+            margin-left: 5vh;
+            margin-top: 5vh;
+            width: 80%;
+            font-size: 30px;
+
+        }
+        h2 {
+            margin-left: 5vh;
+            margin-top: 1vh;
+            font-size: 18px;
+            font-weight: 200;
+            width: 80%;
+        }
+
+
+        
+    }
+    
+}
+}
+
+
+@media (max-width: 550px) {
+    
+    .login {
+
+        .container-forms {
+
+            .forms {
+
+                button {
+                    margin-top: 15vh;
+                }
+            }
+        }
+    
+        .container-forms {
+           
+            width: 70%;
+            height: 60vh;
+            
+            .title {
+                h1 {
+                    margin-top: 5vh;
+                }
+                h2 {
+                    margin-top: 5.5vh;
+                    margin-left: 2vh;
+                }
+            }
+        }
+    
+        .container-text {
+           
+    
+            h1, h2 {
+                margin-left: 7vh;
+               
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 400px) {
+    
+    .login {
+    
+        .container-forms {
+           height: 55vh;
+
+           .forms {
+
+                .password {
+                    margin-top: 2vh;
+                }
+
+                button {
+                    margin-top: 10vh;
+                }
+           }
+    
+            .title {
+                h1 {
+                
+                }
+                h2 {
+                    font-size: 18px;
+                    margin-top: 7vh;
+                }
+            }
+        }
+    
+        .container-text {
+           
+    
+            h1, h2 {
+                margin-left: 7vh;
+               
+            }
+        }
+        
+    }
+}

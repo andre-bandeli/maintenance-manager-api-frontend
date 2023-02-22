@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.navbar {
+
+    width: 100%;
+    height: 10vh;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    background-color: transparent;
+    // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    .navSuperior {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+
+        ul {
+            width: 90%;
+            height: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+
+            li {
+                list-style: none;
+                height: 100%;
+                width: 30%;
+                font-family: 'Kanit', sans-serif;
+                display: flex;
+                align-items: center;
+
+                .menu {
+                    width: 50px;
+                    height: 50px;
+
+                    display: flex;
+                    align-items: center;
+
+                    .MobileNavigation {
+
+                        transition: .5s ease;
+
+                        .mob {
+                            display: inline-block;
+                            width: 50vh;
+                            height: 90vh;
+                            position: fixed;
+                            margin-top: 8vh;
+                            margin-left: -15vh;
+                            z-index: 100;
+                            background-color: rgb(28, 32, 32);
+
+                            li {
+                                height: 7vh;
+                                width: 70%;
+                                margin: auto;
+                                margin-left: 5vh;
+                                margin-top: 5vh;
+                                border-bottom: .5px solid rgba(255, 255, 255, 0.171);
+                                
+
+                                a {
+                                    text-decoration: none;
+                                    color: whitesmoke;
+                                    font-size: 22px;
+                                    font-family: 'Raleway', sans-serif;
+
+                                }
+                            }
+ 
+                        }
+                    }
+
+                    .Hamburguer {
+                        margin-top: .5vh;
+                        cursor: pointer;
+                    }
+                }
+
+                .link {
+                    width: auto;
+                    height: 80%;
+                    margin: auto;
+                    display: flex;
+
+                    a {
+                        margin: auto;
+                        text-decoration: none;
+                        color: rgb(44, 44, 44);
+                        font-family: 'Raleway', sans-serif;
+                    }
+                    a:hover {
+                        transition: .4s ease;
+                        color: rgb(82, 83, 81);
+                        font-weight: 600;
+                    }
+                }
+
+                .redes {
+                    width: 270px;
+                    height: 50px;
+                    margin: auto;
+                    border-radius: 10px;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                    display: flex;
+                    align-items: center;
+
+                    a {
+                        margin-left: 2vh;
+                        font-weight: 400;
+                        text-decoration: none;
+                    }
+                    a {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 25px;
+                            height: 25px;
+                            margin-left: 3vh;
+                        }
+                    }
+                }
+
+                h1 {
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 20px;
+                    font-weight: 800;
+                    color: rgb(75, 73, 73);
+                }
+
+                h2 {
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1440px) {
+    .navbar {
+
+        .navSuperior {
+
+            ul {
+    
+                li {
+                    width: 50%;
+    
+                    .link {
+                        width: 0;
+                        font-size: 0px;
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .navbar {
+
+        .navSuperior {
+
+            ul {
+    
+                li {
+                    .menu {
+
+    
+                        .MobileNavigation {
+                            .mob {
+                               li {
+                                width: 60%;
+                                    margin-left: 10vh;
+                               }
+                            }
+                        }
+                    }
+
+                    h1 {
+                        font-size: 18px;
+                        margin-left: 2vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:550px) {
+    .navbar {
+
+        .navSuperior {
+
+            ul {
+
+                justify-content: left;
+    
+                li {
+
+                    .menu {
+
+    
+                        .MobileNavigation {
+                            .mob {
+                               li {
+                                    a {
+                                        font-size: 16px;
+                                    }
+                               }
+                            }
+                        }
+                    }
+                    
+
+                    h1 {
+                        font-size: 14px;
+                        margin-left: 1vh;
+                    }
+
+                    .redes {
+                        width: 170px;
+                        margin-right: 2vh;
+
+                        a {
+                            margin-left: 1vh;
+
+                            img {
+                                margin-left: 1vh;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
