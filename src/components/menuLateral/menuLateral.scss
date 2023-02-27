@@ -1,0 +1,35 @@
+
+.menuLateral {
+    width: 30vh;
+    height: 100vh;
+
+    .menuDashboard {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+
+        ul {
+            width: 80%;
+            height: 80%;
+            margin-top: 8vh;
+            align-items: center;
+            li {
+                width: 100%;
+                height: 15%;
+                margin: auto;
+                border-bottom: 1px solid rgba(245, 245, 245, 0.185);
+                list-style: none;
+                display: flex;
+                align-items: center;
+
+                a {
+                    margin-left: 2vh;
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+}

@@ -4,8 +4,10 @@ import { Route, Routes, useLocation } from "react-router-dom"
 import React, { useEffect } from 'react';
 import Index from './pages/index/Index';
 import Cadastro from './pages/cadastro/Cadastro';
-import Home from './pages/home/Home';
 import IndexLogin from './pages/login/Index';
+import IndexHome from './pages/home/IndexHome';
+import IndexSolicitacaoServico from './pages/SolicitacaoServico/IndexSolicitacaoServico';
+import IndexOrdemServico from './pages/OrdemServico/IndexOrdemServico';
 
 function App() {
 
@@ -23,6 +25,12 @@ function App() {
       case '/cadastro':
         title = 'Cadastro';
         break;
+      case '/ss':
+        title = 'Solicitação de Serviço';
+        break;
+      case '/os':
+        title = 'Ordem de Serviço';
+        break;
       default:
         title = 'Planejador de Manutenção Online';
         break;
@@ -35,7 +43,9 @@ function App() {
       <Route path="/" element={<Index />} />
       <Route path="/login" element={<IndexLogin />} />
       <Route path="/cadastro" element={<Cadastro />} />
-      <Route path="/home" element={<Home />} />
+      <Route path="/home" element={<IndexHome />} />
+      <Route path="/ss" element={<IndexSolicitacaoServico />} />
+      <Route path="/os" element={<IndexOrdemServico />} />
   </Routes>
   );
 }
