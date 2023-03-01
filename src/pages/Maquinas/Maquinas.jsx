@@ -1,34 +1,32 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 
-import './solicitacaoServico.scss'
+import './maquinas.scss'
 import MenuLateral from '../../components/menuLateral/MenuLateral'
 
-export default function SolicitacaoServico() {
+export default function Maquinas() {
 
-  const[solicitacaoServico,setSolicitacaoServico]=useState([])
+  const[Maquinas,setMaquinas]=useState([])
 
   useEffect(() => {
     fetch('http://localhost:8085/api/v1/so/list')
       .then(response => response.json())
-      .then(data => setSolicitacaoServico(data))
+      .then(data => setMaquinas(data))
       .catch(error => console.error(error))
   }, []);
 
 
   return (
-    <div className='solicitacaoServico'>
-      <div className="containerSolicitacaoServico">
+    <div className='maquinas'>
+      <div className="containerMaquinas">
         <MenuLateral/>
         <div className="containerList">
-          <h1>Solicitações de Serviço</h1>
+          <h1>Máquinas e Equipamentos</h1>
           <div className="buttons">
             <button>
-              criar nova solicitação
+              adicionar nova máquina ou equipamento
             </button>
-            <button>
-              ver ordens de serviço
-            </button>
+    
           </div>
 
           <div className="List">

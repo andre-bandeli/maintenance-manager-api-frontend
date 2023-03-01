@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../../components/darkNavbar/Navbar'
 import Footer from '../../components/footer/Footer'
-import OrdemServico from './OrdemServico'
-import './ordemServico.scss'
+import OrdemServico from './Maquinas'
+import './maquinas.scss'
 
-export default function IndexOrdemServico
+export default function IndexMaquinas
 () {
   return (
-    <div className='indexOrdemServico'>
+    <div className='indexMaquinas'>
         <Navbar/>
         <OrdemServico/>
         <Footer/>

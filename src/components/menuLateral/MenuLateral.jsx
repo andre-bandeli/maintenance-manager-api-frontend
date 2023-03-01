@@ -21,7 +21,7 @@ export default function MenuLateral() {
                       <Link to="/estoque">Estoque, Produtos e Insumos</Link>
                   </li>
                   <li>
-                      <Link to="/kpi">Indicadores</Link>
+                      <Link to="/maquinas">Máquinas</Link>
                   </li>
                   <li>
                       <Link to="/blog">Área do Manutentor</Link>
