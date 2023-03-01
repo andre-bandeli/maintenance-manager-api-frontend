@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import linkedin from './in.png'
 import github from './git.png'
 import login from '../../components/assets/enter.webp'
+import man from './man.png'
 
 export default function Navbar() {
   return (
@@ -32,6 +33,7 @@ export default function Navbar() {
                     <div className="redes">
                         <Link to="https://www.linkedin.com/in/andrebandeli/"> <img src={linkedin} alt="ícone linkedin" /></Link>
                         <Link to="https://github.com/andre-bandeli"> <img src={github} alt="ícone github" /></Link>
+                        <Link to="/usuario"> <img src={man} alt="ícone user" className='user-icon' /></Link> 
                         <Link to="/login"><img src={login} alt="ícone github" /></Link>
                     </div>
 

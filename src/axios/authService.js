@@ -17,7 +17,7 @@ export const userLogin=(authRequest)=>{
 export const fetchUserData=(authRequest)=>{
     return axios({
         method:'GET',
-        url:'http://localhost:8085/api/v1/auth/user',
+        url:'http://localhost:8085/api/v1/auth/description',
         headers:{
             'Authorization':'Bearer '+getToken()
         }

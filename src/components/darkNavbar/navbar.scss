@@ -115,9 +115,13 @@
                         display: flex;
                         align-items: center;
                         img {
+                            width: 20px;
+                            height: 20px;
+                            margin-left: 1vh;
+                        }
+                        .user-icon {
                             width: 25px;
                             height: 25px;
-                            margin-left: 3vh;
                         }
                     }
                 }

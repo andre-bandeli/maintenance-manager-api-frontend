@@ -11,6 +11,7 @@ import IndexOrdemServico from './pages/OrdemServico/IndexOrdemServico';
 import Estoque from './pages/Estoque/Estoque';
 import IndexEstoque from './pages/Estoque/IndexEstoque';
 import IndexMaquinas from './pages/Maquinas/IndexMaquinas';
+import IndexUsuario from './pages/Usuario/IndexUsuario';
 
 function App() {
 
@@ -40,6 +41,9 @@ function App() {
       case '/maquinas':
         title = 'Máquinas';
         break;
+      case '/usuario':
+        title = 'Área do Usuário';
+        break;
       default:
         title = 'Planejador de Manutenção Online';
         break;
@@ -57,6 +61,7 @@ function App() {
       <Route path="/os" element={<IndexOrdemServico />} />
       <Route path="/estoque" element={<IndexEstoque />} />
       <Route path="/maquinas" element={<IndexMaquinas />} />
+      <Route path="/usuario" element={<IndexUsuario />} />
   </Routes>
   );
 }
