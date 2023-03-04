@@ -1,15 +1,15 @@
 import React from 'react'
 import Navbar from '../../components/darkNavbar/Navbar'
 import Footer from '../../components/footer/Footer'
-import SolicitacaoServico from './SolicitacaoServico'
+import FormularioSolicitacao from './FormularioSolicitacao'
 import './formularioSolicitacao.scss'
 
-export default function IndexSolicitacaoServico
+export default function IndexFormularioSolicitacao
 () {
   return (
-    <div className='indexSolicitacaoServico'>
+    <div className='indexFormularioSolicitacao'>
         <Navbar/>
-        <SolicitacaoServico/>
+        <FormularioSolicitacao/>
         <Footer/>
     </div>
   )

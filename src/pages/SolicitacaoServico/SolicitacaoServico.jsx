@@ -1,70 +1,83 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
 import './solicitacaoServico.scss'
 import MenuLateral from '../../components/menuLateral/MenuLateral'
 
+
 export default function SolicitacaoServico() {
 
-  const[solicitacaoServico,setSolicitacaoServico]=useState([])
+  const [solicitacaoServico, setSolicitacaoServico] = useState([]);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [perPage] = useState(10);
 
   useEffect(() => {
-    fetch('http://localhost:8085/api/v1/so/list')
+    fetch('http://localhost:8080/api/v1/so/list')
       .then(response => response.json())
       .then(data => setSolicitacaoServico(data))
       .catch(error => console.error(error))
   }, []);
 
 
+  const indexOfLast = currentPage * perPage;
+  const indexOfFirst = indexOfLast - perPage;
+  const currentSO = solicitacaoServico.slice(indexOfFirst, indexOfLast);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+
   return (
     <div className='solicitacaoServico'>
       <div className="containerSolicitacaoServico">
-        <MenuLateral/>
         <div className="containerList">
           <h1>Solicitações de Serviço</h1>
           <div className="buttons">
             <button>
-              criar nova solicitação
+                <Link to="/new-solicitacao"> criar nova solicitação</Link>
             </button>
             <button>
-              ver ordens de serviço
+                <Link to="/os"> ver ordens de serviço</Link>
+            </button>
+            <button>
+                <Link to="/os"> gerar relatório</Link>
             </button>
           </div>
 
           <div className="List">
-              <ul>
-              <ul>
-                  <li className="header">
-                    <span>ID</span>
-                    <span>Máquina</span>
-                    <span>Setor</span>
-                    <span>Linha</span>
-                    <span>Solicitante</span>
-                    <span>Descrição</span>
-                    <span>Data de abertura</span>
-                    <span>Status</span>
-                    <span>editar</span>
-                    <span>excluir</span>
-                  </li>
-                  <li>
-                    <span>id</span>
-                    <span>Item 1,2</span>
-                    <span>Item 1,3</span>
-                    <span>Item 1,1</span>
-                    <span>Item 1,2</span>
-                    <span>Item 1,3</span>
-                    <span>Item 1,1</span>
-                    <span>Item 1,2</span>
-                    <span><button>
-                      editar</button></span>
-                    <span>
-                      <button>
-                        excluir</button>
-                    </span>
-                  </li>
-
-                </ul>
-              </ul>
+            <ul>
+              <li className="header">
+                <span>Máquina</span>
+                <span>Setor</span>
+                <span>Solicitante</span>
+                <span>Descrição</span>
+                <span>Data de abertura</span>
+                <span>Prioridade</span>
+                <span>Status</span>
+                <span> <h3>editar</h3> <h3>excluir</h3> <h3>detalhes</h3></span>
+              </li>
+              { currentSO.map(solicitacao => (
+              <li key={solicitacao.id}>
+                <span>{solicitacao.maquina}</span>
+                <span>{solicitacao.setor}</span>
+                <span>{solicitacao.nomeSolicitante}</span>
+                <span>{solicitacao.descricao}</span>
+                <span>{solicitacao.dataSolicitacao}</span>
+                <span>{solicitacao.is_urgente ? "Urgente" : "Não Urgente"}</span>
+                <span>aberta</span>
+                <span>
+                  <button className='btn-edit'>editar</button>
+                  <button className='btn-delete'>excluir</button>
+                  <button className='btn-details'>detalhes</button>
+                </span>
+              </li>
+              ))}
+               <Pagination
+                    perPage={perPage}
+                    totalProdutos={solicitacaoServico.length}
+                    paginate={paginate}
+                />
+            </ul>
           </div>
         
         </div>
@@ -72,3 +85,25 @@ export default function SolicitacaoServico() {
     </div>
   )
 }
+
+const Pagination = ({ perPage, totalProdutos, paginate }) => {
+const pageNumbers = [];
+  
+for (let i = 1; i <= Math.ceil(totalProdutos / perPage); i++) {
+  pageNumbers.push(i);
+}
+  
+  return (
+      <nav className='pagination'>
+          <ul>
+          {pageNumbers.map(number => (
+              <li key={number} className='page-item'>
+                  <a onClick={() => paginate(number)} className='page-link'>
+                      {number}
+                  </a>
+              </li>
+          ))}
+          </ul>
+      </nav>
+  );
+};

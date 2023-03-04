@@ -12,6 +12,9 @@ import Estoque from './pages/Estoque/Estoque';
 import IndexEstoque from './pages/Estoque/IndexEstoque';
 import IndexMaquinas from './pages/Maquinas/IndexMaquinas';
 import IndexUsuario from './pages/Usuario/IndexUsuario';
+import IndexFormularioSolicitacao from './pages/SolicitacaoServico/IndexFormularioSolicitacao';
+import IndexFormularioEstoque from './pages/Estoque/IndexFormularioEstoque';
+import SolicitacaoSingle from './pages/SolicitacaoServico/SolicitacaoSingle';
 
 function App() {
 
@@ -44,6 +47,12 @@ function App() {
       case '/usuario':
         title = 'Área do Usuário';
         break;
+      case '/new-solicitacao':
+        title = 'Nova Solicitação de Serviço';
+        break;
+      case '/new-estoque':
+        title = 'Adicionar Estoque';
+        break;
       default:
         title = 'Planejador de Manutenção Online';
         break;
@@ -62,6 +71,9 @@ function App() {
       <Route path="/estoque" element={<IndexEstoque />} />
       <Route path="/maquinas" element={<IndexMaquinas />} />
       <Route path="/usuario" element={<IndexUsuario />} />
+      <Route path="/new-solicitacao" element={<IndexFormularioSolicitacao />} />
+      <Route path="/new-estoque" element={<IndexFormularioEstoque />} />
+      <Route path="/ss/id" element={<SolicitacaoSingle />} />
   </Routes>
   );
 }

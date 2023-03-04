@@ -1,0 +1,47 @@
+
+.solicitacaoSingle {
+    background-image: linear-gradient(to left bottom, #1c1c1d, #1a1a1b, #181819, #151516, #131314);
+
+
+    .containerSingle {
+        width: 100%;
+        height: 70vh;
+
+        h1 {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            margin-top: 150px;
+            color: whitesmoke;
+        }
+        .box {
+            width: 80%;
+            height: 40vh;
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .md-3 {
+                width: 30%;
+                height: 10%;
+                margin: auto;
+                background-color: rgba(63, 62, 62, 0.836);
+                border-radius: 2px;
+                border: 1px solid blue;
+                margin-top: 4vh;
+                
+            }
+
+            .md-10 {
+                width: 96%;
+                height: 30%;
+                margin: auto;
+                background-color: rgba(63, 62, 62, 0.836);
+                border-radius: 2px;
+                margin-top: 4vh;
+                border: 1px solid blue;
+            }
+        }
+    }
+}

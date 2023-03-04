@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
 import './estoque.scss'
 import MenuLateral from '../../components/menuLateral/MenuLateral'
@@ -24,7 +25,7 @@ export default function Estoque() {
           <h1>Estoque</h1>
           <div className="buttons">
             <button>
-              Adicionar novo item ao estoque
+            <Link to="/new-estoque"> Adicionar novo item ao estoque</Link>
             </button>
             <button>
               Gerar relatório

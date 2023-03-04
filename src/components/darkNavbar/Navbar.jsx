@@ -26,7 +26,7 @@ export default function Navbar() {
                         <Link to="/">Novo Projeto</Link>
                     </div>
                     <div className="link">
-                        <Link to="/cadastro">Abrir Novo Chamado</Link>
+                        <Link to="/new-solicitacao">Abrir Novo Chamado</Link>
                     </div>
                 </li>
                 <li>
