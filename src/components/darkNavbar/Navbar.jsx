@@ -45,7 +45,7 @@ export default function Navbar() {
                     <Link to="/maquinas">Máquinas</Link>
                 </li>
                 <li>
-                    <Link to="/fornecedores">Fornecedores</Link>
+                    <Link to="/fornecedor">Fornecedores</Link>
                 </li>
                 <li>
                     <Link to="/login">Projetos</Link>
