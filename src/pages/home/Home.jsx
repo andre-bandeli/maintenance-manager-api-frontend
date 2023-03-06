@@ -31,6 +31,15 @@ export default function Home() {
             <div className="bx-500">
               
             </div>
+            <div className="bx-500">
+              
+            </div>
+            <div className="bx-500">
+              
+            </div>
+            <div className="bx-500">
+              
+            </div>
 
             <div className="bx-12">
               <h2>Últimas Solicitações de Serviço</h2>

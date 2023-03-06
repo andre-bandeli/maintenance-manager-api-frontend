@@ -6,15 +6,13 @@ import Index from './pages/index/Index';
 import Cadastro from './pages/cadastro/Cadastro';
 import IndexLogin from './pages/login/Index';
 import IndexHome from './pages/home/IndexHome';
-import IndexSolicitacaoServico from './pages/SolicitacaoServico/IndexSolicitacaoServico';
-import IndexOrdemServico from './pages/OrdemServico/IndexOrdemServico';
-import Estoque from './pages/Estoque/Estoque';
-import IndexEstoque from './pages/Estoque/IndexEstoque';
+import IndexSolicitacaoServico from './pages/SolicitacaoServico/IndexSolicitacaoServico'
 import IndexMaquinas from './pages/Maquinas/IndexMaquinas';
 import IndexUsuario from './pages/Usuario/IndexUsuario';
 import IndexFormularioSolicitacao from './pages/SolicitacaoServico/IndexFormularioSolicitacao';
-import IndexFormularioEstoque from './pages/Estoque/IndexFormularioEstoque';
 import SolicitacaoSingle from './pages/SolicitacaoServico/SolicitacaoSingle';
+import IndexOrdemServico from './pages/OrdemServico/IndexOrdemServico';
+import IndexFormularioOrdemServico from './pages/OrdemServico/IndexFormularioOrdem'
 
 function App() {
 
@@ -68,12 +66,11 @@ function App() {
       <Route path="/home" element={<IndexHome />} />
       <Route path="/ss" element={<IndexSolicitacaoServico />} />
       <Route path="/os" element={<IndexOrdemServico />} />
-      <Route path="/estoque" element={<IndexEstoque />} />
       <Route path="/maquinas" element={<IndexMaquinas />} />
       <Route path="/usuario" element={<IndexUsuario />} />
       <Route path="/new-solicitacao" element={<IndexFormularioSolicitacao />} />
-      <Route path="/new-estoque" element={<IndexFormularioEstoque />} />
-      <Route path="/ss/id" element={<SolicitacaoSingle />} />
+      <Route path="/new-ordem" element={<IndexFormularioOrdemServico />} />
+      <Route path="/ss/:id" element={<SolicitacaoSingle />} />
   </Routes>
   );
 }

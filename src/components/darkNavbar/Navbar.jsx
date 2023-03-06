@@ -16,18 +16,7 @@ export default function Navbar() {
         <div className="navSuperior">
             <ul>
                 <li>
-                    <h1><span>MAINTENANCE </span>MANAGER</h1>
-                </li>
-                <li>
-                    <div className="link">
-                        <Link to="/home">Dashboard</Link>
-                    </div>
-                    <div className="link">
-                        <Link to="/">Novo Projeto</Link>
-                    </div>
-                    <div className="link">
-                        <Link to="/new-solicitacao">Abrir Novo Chamado</Link>
-                    </div>
+                <Link to="/home">Maintenance <span>Manager</span></Link>
                 </li>
                 <li>
                     <div className="redes">
@@ -37,6 +26,32 @@ export default function Navbar() {
                         <Link to="/login"><img src={login} alt="ícone github" /></Link>
                     </div>
 
+                </li>
+            </ul>
+            <ul className='nav-inferior'>
+                <li>
+                    <Link to="/home">Dashboard</Link>
+                </li>
+                <li>
+                    <Link to="/ss">Solicitação</Link>
+                </li>
+                <li>
+                    <Link to="/os">Ordens</Link>
+                </li>
+                <li>
+                    <Link to="/estoque">Estoque</Link>
+                </li>
+                <li>
+                    <Link to="/maquinas">Máquinas</Link>
+                </li>
+                <li>
+                    <Link to="/login">Manutentor</Link>
+                </li>
+                <li>
+                    <Link to="/login">Projetos</Link>
+                </li>
+                <li>
+                    <Link to="/login">Tarefas</Link>
                 </li>
             </ul>
 

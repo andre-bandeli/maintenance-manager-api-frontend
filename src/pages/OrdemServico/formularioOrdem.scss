@@ -1,32 +1,74 @@
-.indexEstoque {
+.indexFormularioOrdem {
     background-image: linear-gradient(to left bottom, #1c1c1d, #1a1a1b, #181819, #151516, #131314);
 }
 
-.estoque {
+.formularioOrdem {
     width: 100%;
-    height: 100vh;
+    height: 140vh;
     display: flex;
 
-    .containerEstoque {
-        width: 95%;
-        height: 92%;
+    .containerFormularioOrdem {
+        width: 80%;
+        height: 90%;
         margin: auto;
         display: flex;
-        border-top: 1px solid rgba(245, 245, 245, 0.185);
         display: flex;
 
         .containerList {
-            width: 85%;
-            height: 85%;
+            width: 100%;
+            height: 100%;
             margin: auto;
-            display: inline-block;
+            display: flex;
 
-            h1 {
-                position: absolute;
-                margin-top: 0vh;
-                margin-left: 3vh;
-                color: rgb(4, 197, 223);
+            .forms {
+                width: 80%;
+                margin: auto;
+
+                h1 {
+                    color: blue;
+                }
+            
+
+                label {
+                    width: 100%;
+                    color: whitesmoke;
+                    margin-top: 2vh;
+                }
+                input {
+                    width: 100%;
+                    margin-top: 2vh;
+                    border-radius: 5px;
+                    background-color: rgb(43, 42, 42);
+                    border: 1px solid rgba(105, 104, 104, 0.521);
+                    color: whitesmoke;
+                }
+                textarea {
+                    margin-top: 1vh;
+                    width: 100%;
+                    border-radius: 5px;
+                    background-color: rgb(43, 42, 42);
+                    border: 1px solid rgba(105, 104, 104, 0.521);
+                    color: whitesmoke;
+                }
+
+                select {
+                    margin-top: 1vh;
+                    width: 30%;
+                    border-radius: 5px;
+                    background-color: rgb(43, 42, 42);
+                    border: 1px solid rgba(105, 104, 104, 0.521);
+                    color: whitesmoke;
+                }
+
+                button {
+                    margin-left: 0vh;
+                    margin-top: 4vh;
+                    width: 150px;
+                    background-color: greenyellow;
+                    border: 1px solid greenyellow;
+                }
             }
+
 
             h2 {
                 color: whitesmoke;
@@ -41,7 +83,7 @@
                 align-items: center;
 
                 button {
-                    width: auto;
+                    width: 230px;
                     height: 35px;
                     border-radius: 5px;
                     border: 1px solid white;

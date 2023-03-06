@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
 import './solicitacaoServico.scss'
-import MenuLateral from '../../components/menuLateral/MenuLateral'
 
 
 export default function SolicitacaoServico() {
@@ -19,6 +18,20 @@ export default function SolicitacaoServico() {
       .then(data => setSolicitacaoServico(data))
       .catch(error => console.error(error))
   }, []);
+
+  const handleDelete = (id) => {
+    fetch(`http://localhost:8080/api/v1/so/remove/${id}`, {
+      method: 'DELETE',
+    })
+    .then(response => {
+      if (response.ok) {
+        setSolicitacaoServico(solicitacaoServico.filter(s => s.id !== id));
+      } else {
+        throw new Error('Erro ao excluir a solicitação.');
+      }
+    })
+    .catch(error => console.error(error));
+  };
 
 
   const indexOfLast = currentPage * perPage;
@@ -47,6 +60,7 @@ export default function SolicitacaoServico() {
           <div className="List">
             <ul>
               <li className="header">
+                <span>Código</span>
                 <span>Máquina</span>
                 <span>Setor</span>
                 <span>Solicitante</span>
@@ -54,21 +68,24 @@ export default function SolicitacaoServico() {
                 <span>Data de abertura</span>
                 <span>Prioridade</span>
                 <span>Status</span>
-                <span> <h3>editar</h3> <h3>excluir</h3> <h3>detalhes</h3></span>
+                <span> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
               </li>
               { currentSO.map(solicitacao => (
               <li key={solicitacao.id}>
+                <span>{solicitacao.codigo}</span>
                 <span>{solicitacao.maquina}</span>
                 <span>{solicitacao.setor}</span>
                 <span>{solicitacao.nomeSolicitante}</span>
                 <span>{solicitacao.descricao}</span>
                 <span>{solicitacao.dataSolicitacao}</span>
                 <span>{solicitacao.is_urgente ? "Urgente" : "Não Urgente"}</span>
-                <span>aberta</span>
+                <span>{solicitacao.status}</span>
                 <span>
-                  <button className='btn-edit'>editar</button>
-                  <button className='btn-delete'>excluir</button>
-                  <button className='btn-details'>detalhes</button>
+                  <button className='btn-edit'>edit</button>
+                  <button className='btn-delete' onClick={() => handleDelete(solicitacao.id)}> <Link to='/ss'>excluir</Link></button>
+                  <button className='btn-details'>
+                  <Link to={`/ss/${solicitacao.id}`}>
+                    ver + </Link> </button>
                 </span>
               </li>
               ))}

@@ -55,7 +55,7 @@ export default function FormularioSolicitacao() {
             <div className="containerFormularioSolicitacao">
               <div className="containerList">
                   <form onSubmit={onSubmit} className="forms">
-                    <h1>Nova Solicitação</h1>
+                    <h1>Nova Solicitação de Serviço</h1>
                     
                     <label htmlFor="codigo">Código:</label>
                     <input type="text" id="codigo" value={codigo} onChange={(e) => setCodigo(e.target.value)} />

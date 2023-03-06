@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../components/darkNavbar/Navbar'
 import Footer from '../../components/footer/Footer'
 import OrdemServico from './OrdemServico'
-import './ordemServico.scss'
+import './formularioOrdem.scss'
 
 export default function IndexOrdemServico
 () {

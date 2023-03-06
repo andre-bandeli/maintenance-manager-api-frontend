@@ -1,15 +1,15 @@
 import React from 'react'
 import Navbar from '../../components/darkNavbar/Navbar'
 import Footer from '../../components/footer/Footer'
-import OrdemServico from './Estoque'
-import './estoque.scss'
+import FormularioOrdem from './FormularioOrdem'
+import './formularioOrdem.scss'
 
-export default function IndexEstoque
+export default function IndexFormularioOrdem
 () {
   return (
-    <div className='indexEstoque'>
+    <div className='indexFormularioOrdem'>
         <Navbar/>
-        <OrdemServico/>
+        <FormularioOrdem/>
         <Footer/>
     </div>
   )
