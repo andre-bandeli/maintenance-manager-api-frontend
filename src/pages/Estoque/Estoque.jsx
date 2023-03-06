@@ -8,14 +8,23 @@ import './estoque.scss'
 export default function Estoque() {
 
   const [estoque, setEstoque] = useState([]);
+  const [listaCompra, setListaCompra] = useState([]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [perPage] = useState(10);
+
 
   useEffect(() => {
     fetch('http://localhost:8080/api/v1/produto/list')
       .then(response => response.json())
       .then(data => setEstoque(data))
+      .catch(error => console.error(error))
+  }, []);
+
+  useEffect(() => {
+    fetch('http://localhost:8080/api/v1/compras/list')
+      .then(response => response.json())
+      .then(data => setListaCompra(data))
       .catch(error => console.error(error))
   }, []);
 
@@ -89,6 +98,28 @@ export default function Estoque() {
             <div className="related">
               <ul className='listaCompras'>
                   <h2>Lista de Compras</h2>
+
+                  <ul>
+                  <li className="header">
+                    <span>Nome Produto</span>
+                    <span>Quantidade</span>
+                    <span>DeadLine</span>
+                  </li>
+                  { listaCompra.map(lista => (
+                  <li key={lista.id}>
+                    <span>{lista.nomeProduto}</span>
+                    <span>{lista.quantidade}</span>
+                    <span>{lista.deadline}</span>
+                  </li>
+              ))}
+                  </ul>
+
+                  <div className='btn-compras'>
+                    <button className='btn-primary'>Adicionar</button>
+                    <button className='btn-sucundary'>Ver lista completa</button>
+                  </div>
+
+                
               </ul>
               <ul className='listaEstoqueBaixo'>
                   <h2>Estoque Baixo</h2>

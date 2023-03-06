@@ -76,13 +76,50 @@
                         background-color: rgb(226, 226, 224);
                         margin: auto;
                         margin-top: 1vh;
-                        display: flex;
+                        display: inline-block;
+
+                        .btn-compras {
+                            display: flex;
+                            margin-top: 2vh;
+
+                            .btn-primary {
+                                margin-left: 3vh;
+                                background-color: limegreen;
+                                border: none;
+                                border-radius: 5px;
+                                font-size: 14px;
+
+                            }
+                            .btn-sucundary {
+                                margin-left: 2vh;
+                                background-color: rgb(4, 130, 168);
+                                border: none;
+                                border-radius: 5px;
+                                font-size: 14px;
+                            }
+                        }
     
                         h2 {
                             margin-top: 1vh;
-                            margin-left: 2vh;
+                            margin-left: 2.5vh;
                             font-size: 22px;
                             color: rgb(41, 41, 41);
+                        }
+
+                        ul {
+                            width: 90%;
+                            min-height: 220px;
+                            margin: auto;
+                            margin-top: 2vh;
+
+                            li {
+                                margin-top: 0;
+            
+                                span {
+                                    margin-top: 0;
+                                    color: black;
+                                }
+                            }
                         }
                     }
 
@@ -93,13 +130,14 @@
                         background-color: rgb(219, 0, 0);
                         margin: auto;
                         margin-top: 50px;
-                        display: flex;
+                        display: inline-block;
     
                         h2 {
                             margin-top: 1vh;
                             margin-left: 2vh;
                             font-size: 22px;
-                            color: rgb(41, 41, 41);
+                            font-weight: bolder;
+                            color: rgb(231, 225, 225);
                         }
                     }
 

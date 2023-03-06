@@ -4,8 +4,8 @@ import './navbar.scss'
 
 import { Link } from "react-router-dom";
 
-import linkedin from '../assets/in.webp'
-import github from '../assets/git.webp'
+import linkedin from '../assets/in.png'
+import github from '../assets/git.png'
 import login from '../assets/enter.webp'
 
 export default function Navbar() {
@@ -20,20 +20,7 @@ export default function Navbar() {
                     </div>
                     <h1>MAINTENANCE MANAGER</h1>
                 </li>
-                <li>
-                    <div className="link">
-                        <Link to="/">Home</Link>
-                    </div>
-                    <div className="link">
-                        <Link to="/">Sobre</Link>
-                    </div>
-                    <div className="link">
-                        <Link to="/">Blog do Manutentor</Link>
-                    </div>
-                    <div className="link">
-                        <Link to="/cadastro">Cadastre-se</Link>
-                    </div>
-                </li>
+               
                 <li>
                     <div className="redes">
                         <Link to="https://www.linkedin.com/in/andrebandeli/"> <img src={linkedin} alt="ícone linkedin" /></Link>
