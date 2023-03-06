@@ -45,13 +45,14 @@ export default function Navbar() {
                     <Link to="/maquinas">Máquinas</Link>
                 </li>
                 <li>
-                    <Link to="/login">Manutentor</Link>
+                    <Link to="/fornecedores">Fornecedores</Link>
                 </li>
                 <li>
                     <Link to="/login">Projetos</Link>
                 </li>
+
                 <li>
-                    <Link to="/login">Tarefas</Link>
+                    <Link to="/login">Manutentor</Link>
                 </li>
             </ul>
 

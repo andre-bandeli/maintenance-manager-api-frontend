@@ -1,15 +1,15 @@
 import React from 'react'
 import Navbar from '../../components/darkNavbar/Navbar'
 import Footer from '../../components/footer/Footer'
-import Maquinas from './Maquinas'
-import './formularioMaquinas.scss'
+import Estoque from './Estoque'
+import './formularioEstoque.scss'
 
-export default function IndexMaquinas
+export default function IndexEstoque
 () {
   return (
-    <div className='indexMaquinas'>
+    <div className='indexEstoque'>
         <Navbar/>
-        <Maquinas/>
+        <Estoque/>
         <Footer/>
     </div>
   )

@@ -2,12 +2,12 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
-import './maquinas.scss'
+import './fornecedores.scss'
 
 
-export default function Maquinas() {
+export default function Fornecedores() {
 
-  const [maquinas, setMaquinas] = useState([]);
+  const [fornecedores, setFornecedores] = useState([]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [perPage] = useState(10);
@@ -15,7 +15,7 @@ export default function Maquinas() {
   useEffect(() => {
     fetch('http://localhost:8080/api/v1/os/list')
       .then(response => response.json())
-      .then(data => setMaquinas(data))
+      .then(data => setFornecedores(data))
       .catch(error => console.error(error))
   }, []);
 
@@ -25,9 +25,9 @@ export default function Maquinas() {
     })
     .then(response => {
       if (response.ok) {
-        setMaquinas(maquinas.filter(s => s.id !== id));
+        setFornecedores(Fornecedores.filter(s => s.id !== id));
       } else {
-        throw new Error('Erro ao excluir máquina.');
+        throw new Error('Erro ao excluir a ordem.');
       }
     })
     .catch(error => console.error(error));
@@ -36,15 +36,15 @@ export default function Maquinas() {
 
   const indexOfLast = currentPage * perPage;
   const indexOfFirst = indexOfLast - perPage;
-  const currentSO = maquinas.slice(indexOfFirst, indexOfLast);
+  const currentSO = fornecedores.slice(indexOfFirst, indexOfLast);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 
   return (
-    <div className='maquinas'>
-      <div className="containerMaquinas">
+    <div className='fornecedores'>
+      <div className="containerFornecedores">
         <div className="containerList">
-          <h1>Máquinas</h1>
+          <h1>Fornecedores</h1>
           <div className="buttons">
             <button>
                 <Link to="/new-ordem"> criar nova OS</Link>
@@ -70,28 +70,28 @@ export default function Maquinas() {
                 <span>Status</span>
                 <span> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
               </li>
-              { currentSO.map(maquinas => (
-              <li key={maquinas.id}>
-                <span>{maquinas.codigo}</span>
-                <span>{maquinas.maquina}</span>
-                <span>{maquinas.setor}</span>
-                <span>{maquinas.nomeSolicitante}</span>
-                <span>{maquinas.descricao}</span>
-                <span>{maquinas.dataSolicitacao}</span>
-                <span>{maquinas.dataFechamento}</span>
-                <span>{maquinas.status}</span>
+              { currentSO.map(fornecedores => (
+              <li key={fornecedores.id}>
+                <span>{fornecedores.codigo}</span>
+                <span>{fornecedores.maquina}</span>
+                <span>{fornecedores.setor}</span>
+                <span>{fornecedores.nomeSolicitante}</span>
+                <span>{fornecedores.descricao}</span>
+                <span>{fornecedores.dataSolicitacao}</span>
+                <span>{fornecedores.dataFechamento}</span>
+                <span>{fornecedores.status}</span>
                 <span>
                   <button className='btn-edit'>edit</button>
-                  <button className='btn-delete' onClick={() => handleDelete(maquinas.id)}> <Link to='/ss'>excluir</Link></button>
+                  <button className='btn-delete' onClick={() => handleDelete(fornecedores.id)}> <Link to='/ss'>excluir</Link></button>
                   <button className='btn-details'>
-                  <Link to={`/ss/${maquinas.id}`}>
+                  <Link to={`/ss/${fornecedores.id}`}>
                     ver + </Link> </button>
                 </span>
               </li>
               ))}
                <Pagination
                     perPage={perPage}
-                    totalProdutos={maquinas.length}
+                    totalProdutos={fornecedores.length}
                     paginate={paginate}
                 />
             </ul>
@@ -103,10 +103,10 @@ export default function Maquinas() {
   )
 }
 
-const Pagination = ({ perPage, totalMaquinas, paginate }) => {
+const Pagination = ({ perPage, totalFornecedores, paginate }) => {
 const pageNumbers = [];
   
-for (let i = 1; i <= Math.ceil(totalMaquinas / perPage); i++) {
+for (let i = 1; i <= Math.ceil(totalFornecedores / perPage); i++) {
   pageNumbers.push(i);
 }
   

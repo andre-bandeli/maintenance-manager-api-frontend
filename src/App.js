@@ -7,12 +7,14 @@ import Cadastro from './pages/cadastro/Cadastro';
 import IndexLogin from './pages/login/Index';
 import IndexHome from './pages/home/IndexHome';
 import IndexSolicitacaoServico from './pages/SolicitacaoServico/IndexSolicitacaoServico'
-import IndexMaquinas from './pages/Maquinas/IndexMaquinas';
 import IndexUsuario from './pages/Usuario/IndexUsuario';
 import IndexFormularioSolicitacao from './pages/SolicitacaoServico/IndexFormularioSolicitacao';
 import SolicitacaoSingle from './pages/SolicitacaoServico/SolicitacaoSingle';
 import IndexOrdemServico from './pages/OrdemServico/IndexOrdemServico';
 import IndexFormularioOrdemServico from './pages/OrdemServico/IndexFormularioOrdem'
+import IndexEstoque from './pages/Estoque/IndexEstoque';
+import IndexMaquinas from './pages/Maquinas/IndexMaquinas';
+import IndexFornecedores from './pages/Fornecedores/IndexFornecedores';
 
 function App() {
 
@@ -71,6 +73,8 @@ function App() {
       <Route path="/new-solicitacao" element={<IndexFormularioSolicitacao />} />
       <Route path="/new-ordem" element={<IndexFormularioOrdemServico />} />
       <Route path="/ss/:id" element={<SolicitacaoSingle />} />
+      <Route path="/estoque" element={<IndexEstoque />} />
+      <Route path="/fornecedores" element={<IndexFornecedores />} />
   </Routes>
   );
 }
