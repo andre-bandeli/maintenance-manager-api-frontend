@@ -13,7 +13,7 @@ export default function Fornecedores() {
   const [perPage] = useState(10);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/v1/os/list')
+    fetch('http://localhost:8080/api/v1/fornecedores/list')
       .then(response => response.json())
       .then(data => setFornecedores(data))
       .catch(error => console.error(error))

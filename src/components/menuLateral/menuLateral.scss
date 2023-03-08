@@ -1,26 +1,35 @@
 
 .menuLateral {
-    width: 30vh;
+    width: 15%;
+    margin-top: 200px;
     height: 100vh;
+    margin-left: 0;
 
     .menuDashboard {
         width: 100%;
         height: 100%;
         margin: auto;
         display: flex;
+        background-color: rgb(241, 241, 241);
 
         ul {
-            width: 80%;
-            height: 80%;
+            width: 90%;
+            height: 100%;
             margin: auto;
             margin-top: 120px;
             margin-left: 0;
             align-items: center;
+
+            h2 {
+                color: whitesmoke;
+                margin-top: 100px;
+            }
+
             li {
                 width: 100%;
-                height: 15%;
+                height: 100px;
                 margin: auto;
-                border-bottom: 1px solid rgba(245, 245, 245, 0.185);
+                background-color: white;
                 list-style: none;
                 display: flex;
                 align-items: center;

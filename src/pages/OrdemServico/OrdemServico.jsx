@@ -13,14 +13,14 @@ export default function OrdemServico() {
   const [perPage] = useState(10);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/v1/os/list')
+    fetch('http://localhost:8080/api/v1/ordem/list')
       .then(response => response.json())
       .then(data => setOrdemServico(data))
       .catch(error => console.error(error))
   }, []);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:8080/api/v1/os/delete/${id}`, {
+    fetch(`http://localhost:8080/api/v1/ordem/delete/${id}`, {
       method: 'DELETE',
     })
     .then(response => {

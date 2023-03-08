@@ -13,14 +13,14 @@ export default function SolicitacaoServico() {
   const [perPage] = useState(10);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/v1/so/list')
+    fetch('http://localhost:8080/api/v1/solicitacao/list')
       .then(response => response.json())
       .then(data => setSolicitacaoServico(data))
       .catch(error => console.error(error))
   }, []);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:8080/api/v1/so/remove/${id}`, {
+    fetch(`http://localhost:8080/api/v1/solicitacao/remove/${id}`, {
       method: 'DELETE',
     })
     .then(response => {

@@ -5,46 +5,113 @@
 
 .home {
     width: 100%;
-    height: 160vh;
+    height: 180vh;
     display: flex;
 
     .containerHome {
         width: 95%;
         height: 95%;
         margin: auto;
-        display: flex;
-        display: flex;
+        
+        h1 {
+            width: 100%;
+            text-align: center;
+            color: rgb(4, 197, 223);
+            margin-top: 50px;
+        }
+
 
 
         .dash {
-            width: 85%;
-            height: 85%;
+            width: 95%;
+            height: 90%;
             margin: auto;
+            margin-top: 50px;
             display: flex;
             flex-wrap: wrap;
 
-            h1 {
-                position: absolute;
-                margin-top: -5vh;
-                margin-left: 3vh;
-                color: rgb(4, 197, 223);
-            }
-
+           
             .bx-500 {
                 width: 29%;
                 height: 15vh;
                 margin: auto;
-                margin-top: 5vh;
-                background-color: rgb(247, 247, 16);
+                margin-top: 3.5vh;
+
+                .container-danger {
+                    width: 80%;
+                    height: 100%;
+                    background-color: red;
+                    margin: auto;
+                    border-radius: 15px;
+                    display: flex;
+                    align-items: center;
+
+                    .content {
+                        width: 90%;
+                        height: 80%;
+                        margin: auto;
+
+                        img {
+                            margin: -40px 95px ;
+                        }
+                        h3 {
+                            font-size: 20px;
+                        }
+                    }
+
+                    
+
+
+                }
+
+                img {
+                    position: absolute;
+                    width: 20px;
+                    margin: -40px 150px;
+                }
+
+                h2 {
+                    color: whitesmoke;
+                    text-align: center;
+                    margin-top: 1vh;
+                    font-weight: bolder;
+                    font-size: 40px;
+                }
+                h3 {
+                    margin: auto;
+                    width: 70%;
+                    color: whitesmoke;
+                    text-align: center;
+                }
+            
+                .content {
+                    width: 90%;
+                    height: 90%;
+                    margin: auto;
+
+                    img {
+                        margin: -60px 20px;
+                    }
+
+                    h4 {
+                        margin: auto;
+                        width: 70%;
+                        color: whitesmoke;
+                        text-align: center;
+                        font-size: 18px;
+                    }
+
+                }
+              
             }
 
             .bx-12 {
                 width: 95%;
-                height: 40vh;
+                height: 45vh;
                 margin-top: 1vh;
                 margin: auto;
                 margin-top: 5vh;
-                border-top: 1px solid white;
+                border-top: 1px solid rgba(255, 255, 255, 0.164);
                 display: inline-block;
 
                 h2 {
@@ -59,44 +126,93 @@
                     height: auto;
                     margin-top: 1vh;
 
-                    .ul-list {
+                    ul {
                         width: 100%;
-                        height: 100%;
-                        display: flex;
-                        flex-wrap: wrap;
-                        
+                        padding: 0;
+                        margin: 0;
+    
+    
+                        .header {
+                            font-weight: bold;
+                            height: 25px;
+                            background-color: rgb(226, 226, 226);
+                            display: flex;
+                            width: 100%;
+                            list-style: none;
+                            align-items: center;
+    
+                            span {
+                                width: 10%;
+                                color: rgb(29, 29, 29);
+                                flex: 1;
+                                padding: 2px;
+                                font-size: 12px;
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+    
                         li {
                             width: 100%;
-                            height: 40px;
-                            margin-top: 1vh;
-                            margin-left: -3vh;
                             list-style: none;
                             display: flex;
+                            margin-top: 1vh;
                             align-items: center;
-
-                            img {
-                                width: 20px;
-                                height: 20px;
-                                margin-top: -1vh;
-                                margin-left: 2vh;
-                            }
-
-                            h3 {
-                                font-size: 15px;
-                                font-weight: 200;
-                                color: white;
-                                margin-right: 2vh;
-                            }
-
-                            button {
-                                width: 100px;
-                                font-size: 12px;
-                                margin-top: -1vh;
-                                margin-left: 2vh;
-                                background-color: transparent;
-                                border: 1px solid greenyellow;
-                                border-radius: 5px;
+                            border-bottom: 1px solid rgba(245, 245, 245, 0.171);
+    
+                            span {
+                                width: 10%;
+                                flex: 1;
+                                padding: 5px;
                                 color: whitesmoke;
+                                font-size: 14px;
+                                display: flex;
+                                align-items: center;
+              
+    
+                                h3 {
+                                    font-size: 15px;
+                                    margin-right: 2vh;
+                                }
+    
+                                .btn-edit {
+                                    height: 20px;
+                                    background-color: blue;
+                                    margin-right: 2vh;
+                                    font-size: 12px;
+                                    border-radius: 5px;
+                                    border: none;
+    
+                                    a {
+                                        color: whitesmoke;
+                                        text-decoration: none;
+                                    }
+                                }
+                                .btn-delete {
+                                    height: 20px;
+                                    background-color: rgb(243, 20, 20);
+                                    font-size: 12px;
+                                    margin-right: 2vh;
+                                    border-radius: 5px;
+                                    border: none;
+    
+                                    a {
+                                        color: whitesmoke;
+                                        text-decoration: none;
+                                    }
+                                }
+                                .btn-details {
+                                    height: 20px;
+                                    background-color: rgb(238, 185, 11);
+                                    font-size: 12px;
+                                    border: none;
+                                    border-radius: 5px;
+    
+                                    a {
+                                        color: whitesmoke;
+                                        text-decoration: none;
+                                    }
+                                }
                             }
                         }
                     }

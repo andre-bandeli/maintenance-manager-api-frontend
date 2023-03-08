@@ -97,7 +97,10 @@ export default function Estoque() {
             </ul>
             <div className="related">
               <ul className='listaCompras'>
+                <div className='header-l'>
                   <h2>Lista de Compras</h2>
+                </div>
+                  
 
                   <ul>
                   <li className="header">
