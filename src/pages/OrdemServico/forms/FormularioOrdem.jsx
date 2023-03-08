@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 export default function FormularioOrdem() {
 
     const [idSolicitacao, setIdSolicitacao] = useState("");
-    const [solicitacoes, setSolicitacoes] = useState([]);
+    const [ordem, setOrdem] = useState([]);
     const [id, setId] = useState("")
     const [codigo, setCodigo] = useState("")
     const [maquina, setMaquina] = useState("")
@@ -21,15 +21,15 @@ export default function FormularioOrdem() {
     const [observacoes, setObservacoes] = useState("")
 
     useEffect(() => {
-      fetch("http://localhost:8080/api/v1/so/list")
+      fetch("http://localhost:8080/api/v1/solicitacao/list")
         .then(res => res.json())
-        .then(data => setSolicitacoes(data))
+        .then(data => setOrdem(data))
         .catch(err => console.log(err));
     }, []);
 
     const handleSelect = (e) => {
       const id = e.target.value;
-      const solicitacao = solicitacoes.find(s => s.id === Number(id));
+      const solicitacao = ordem.find(s => s.id === Number(id));
       setIdSolicitacao(solicitacao.id);
       setMaquina(solicitacao.maquina);
       setSetor(solicitacao.setor);
@@ -57,7 +57,7 @@ export default function FormularioOrdem() {
         console.log(dados)
     
     
-        fetch("http://localhost:8080/api/v1/os/add",{
+        fetch("http://localhost:8080/api/v1/ordem/add",{
           method:"POST",
           headers:{"Content-Type":"application/json"},
           body:JSON.stringify(dados)
@@ -93,7 +93,7 @@ export default function FormularioOrdem() {
                     <label htmlFor="idSolicitacao">Solicitação:</label>
                     <select id="idSolicitacao" value={idSolicitacao} onChange={handleSelect}>
                       <option value="">Selecione uma solicitação</option>
-                      {solicitacoes.map(s => <option key={s.id} value={s.id}>{s.codigo}</option>)}
+                      {ordem.map(s => <option key={s.id} value={s.id}>{s.codigo}</option>)}
                     </select>
                     
                     <label htmlFor="codigo">Código:</label>

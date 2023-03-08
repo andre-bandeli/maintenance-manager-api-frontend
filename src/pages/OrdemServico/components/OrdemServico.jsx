@@ -50,9 +50,6 @@ export default function OrdemServico() {
                 <Link to="/new-ordem"> criar nova OS</Link>
             </button>
             <button>
-                <Link to="/os"> ver OS</Link>
-            </button>
-            <button>
                 <Link to="/os"> gerar relatório</Link>
             </button>
           </div>
@@ -63,31 +60,40 @@ export default function OrdemServico() {
                 <span>Código</span>
                 <span>Máquina</span>
                 <span>Setor</span>
-                <span>Solicitante</span>
-                <span>Descrição</span>
+                <span className='span-mobile-tableb-remove'>Solicitante</span>
+                <span className='span-mobile-first-remove'>Descrição</span>
                 <span>Data de abertura</span>
-                <span>Data de fechamento</span>
-                <span>Status</span>
-                <span> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
+                <span>Prioridade</span>
+                <span className='span-mobile-tableb-remove'>Status</span>
+                <span className='span-mobile-tableb-remove'>Data Fechamento</span>
+                <span className='span-mobile-tableb-remove'>Técnico Responsável</span>
+                <span className='span-mobile-tableb-remove'>Observações</span>
+                <span className='span-mobile-tableb-remove'>edit</span>
+                <span className='span-mobile-tableb-remove'> excluir</span>
+                <span className='span-mobile-first-remove'> ver</span>
+              
               </li>
               { currentSO.map(ordem => (
+              <Link to={`/os/${ordem.id}`}>
               <li key={ordem.id}>
                 <span>{ordem.codigo}</span>
                 <span>{ordem.maquina}</span>
                 <span>{ordem.setor}</span>
-                <span>{ordem.nomeSolicitante}</span>
-                <span>{ordem.descricao}</span>
-                <span>{ordem.dataSolicitacao}</span>
-                <span>{ordem.dataFechamento}</span>
-                <span>{ordem.status}</span>
-                <span>
-                  <button className='btn-edit'>edit</button>
-                  <button className='btn-delete' onClick={() => handleDelete(ordem.id)}> <Link to='/ss'>excluir</Link></button>
-                  <button className='btn-details'>
-                  <Link to={`/ss/${ordem.id}`}>
-                    ver + </Link> </button>
+                <span className='span-mobile-tableb-remove'>{ordem.nomeSolicitante}</span>
+                <span className='span-mobile-first-remove'>{ordem.descricao}</span>
+                <span>{ordem.dataordem}</span>
+                <span>{ordem.is_urgente ? "Urgente" : "Não Urgente"}</span>
+                <span className='span-mobile-tableb-remove'>{ordem.status}</span>
+                <span className='span-mobile-tableb-remove'>{ordem.dataFechamento}</span>
+                <span className='span-mobile-tableb-remove'>{ordem.tecnicoResponsavel}</span>
+                <span className='span-mobile-tableb-remove'>{ordem.observacoes}</span>
+                <span className='span-mobile-tableb-remove'><button className='btn-edit'> edit</button>
                 </span>
-              </li>
+                <span className='span-mobile-tableb-remove'>  <button className='btn-delete' onClick={() => handleDelete(ordem.id)}> 
+                <Link to='/ss'>excluir</Link></button></span>
+                <span className='span-mobile-first-remove'>  <button className='btn-details'> 
+                <Link to={`/os/${ordem.id}`}>detalhes</Link></button></span>
+              </li></Link>
               ))}
                <Pagination
                     perPage={perPage}

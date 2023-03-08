@@ -1,7 +1,7 @@
 import React from 'react'
 import './ordemSingle.scss'
-import Footer from '../../components/footer/Footer'
-import Navbar from '../../components/darkNavbar/Navbar'
+import Footer from '../../../components/footer/Footer'
+import Navbar from '../../../components/darkNavbar/Navbar'
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 
@@ -10,7 +10,7 @@ export default function OrdemSingle() {
   const[ordem,setOrdem]=useState([]);
 
   const { id } = useParams();
-  const url = `http://localhost:8080/api/v1/os/get/${id}`;
+  const url = `http://localhost:8080/api/v1/ordem/getordem/${id}`;
 
   useEffect(()=>{
       fetch(url)
@@ -27,7 +27,7 @@ export default function OrdemSingle() {
         <Navbar/>
         <div className="containerSingle">
 
-          <h1>Solicitação de Serviço #{ordem.codigo}</h1>
+          <h1>Ordem de Serviço #{ordem.codigo}</h1>
 
           <div className="box">
             <div className="md-3">
@@ -40,7 +40,7 @@ export default function OrdemSingle() {
               <h3>{ordem.nomeSolicitante}</h3>
               </div>
               <div className="md-3">
-              <h3>{ordem.dataSolicitacao}</h3>
+              <h3>{ordem.dataordem}</h3>
               </div>
               <div className="md-10">
               <h3>{ordem.descricao}</h3>

@@ -1,8 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/darkNavbar/Navbar'
 import Footer from '../../components/footer/Footer'
-import OrdemServico from './OrdemServico'
-import './formularioOrdem.scss'
+import OrdemServico from './components/OrdemServico'
 
 export default function IndexOrdemServico
 () {
