@@ -84,11 +84,12 @@ export default function SolicitacaoServico() {
                 <span>{solicitacao.dataSolicitacao}</span>
                 <span>{solicitacao.is_urgente ? "Urgente" : "Não Urgente"}</span>
                 <span className='span-mobile-tableb-remove'>{solicitacao.status}</span>
-                <span className='span-mobile-tableb-remove'><button className='btn-edit'>edit</button></span>
+                <span className='span-mobile-tableb-remove'><button className='btn-edit'> edit</button>
+                </span>
                 <span className='span-mobile-tableb-remove'>  <button className='btn-delete' onClick={() => handleDelete(solicitacao.id)}> 
                 <Link to='/ss'>excluir</Link></button></span>
-                <span className='span-mobile-first-remove'>  <button className='btn-details' onClick={() => handleDelete(solicitacao.id)}> 
-                <Link to='/ss'>detalhes</Link></button></span>
+                <span className='span-mobile-first-remove'>  <button className='btn-details'> 
+                <Link to={`/ss/${solicitacao.id}`}>detalhes</Link></button></span>
               </li></Link>
               ))}
                <Pagination

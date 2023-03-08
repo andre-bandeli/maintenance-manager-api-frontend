@@ -10,7 +10,7 @@ export default function SolicitacaoSingle() {
   const[solicitacao,setSolicitacao]=useState([]);
 
   const { id } = useParams();
-  const url = `http://localhost:8080/api/v1/so/get/${id}`;
+  const url = `http://localhost:8080/api/v1/solicitacao/get/${id}`;
 
   useEffect(()=>{
       fetch(url)

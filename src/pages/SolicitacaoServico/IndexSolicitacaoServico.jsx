@@ -7,7 +7,7 @@ export default function IndexSolicitacaoServico
 () {
   return (
     <div className='indexSolicitacaoServico'>
-        {/* <Navbar/> */}
+        <Navbar/>
         <SolicitacaoServico/>
         <Footer/>
     </div>

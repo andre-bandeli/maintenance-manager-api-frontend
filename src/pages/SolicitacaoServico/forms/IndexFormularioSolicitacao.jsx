@@ -8,7 +8,7 @@ export default function IndexFormularioSolicitacao
 () {
   return (
     <div className='indexFormularioSolicitacao'>
-        <Navbar/>
+        {/* <Navbar/> */}
         <FormularioSolicitacao/>
         <Footer/>
     </div>
