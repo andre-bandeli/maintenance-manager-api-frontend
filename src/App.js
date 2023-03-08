@@ -8,13 +8,13 @@ import IndexLogin from './pages/login/Index';
 import IndexHome from './pages/home/IndexHome';
 import IndexSolicitacaoServico from './pages/SolicitacaoServico/IndexSolicitacaoServico'
 import IndexUsuario from './pages/Usuario/IndexUsuario';
-import IndexFormularioSolicitacao from './pages/SolicitacaoServico/IndexFormularioSolicitacao';
-import SolicitacaoSingle from './pages/SolicitacaoServico/SolicitacaoSingle';
 import IndexOrdemServico from './pages/OrdemServico/IndexOrdemServico';
 import IndexFormularioOrdemServico from './pages/OrdemServico/IndexFormularioOrdem'
 import IndexEstoque from './pages/Estoque/IndexEstoque';
 import IndexMaquinas from './pages/Maquinas/IndexMaquinas';
 import IndexFornecedor from './pages/Fornecedor/IndexFornecedor';
+import IndexFormularioSolicitacao from './pages/SolicitacaoServico/forms/IndexFormularioSolicitacao';
+import SolicitacaoSingle from './pages/SolicitacaoServico/single/SolicitacaoSingle'
 
 function App() {
 

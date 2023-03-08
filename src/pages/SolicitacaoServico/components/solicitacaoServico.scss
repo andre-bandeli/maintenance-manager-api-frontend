@@ -1,0 +1,325 @@
+
+.solicitacaoServico {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    .containerSolicitacaoServico {
+        width: 95%;
+        height: 90%;
+        margin: auto;
+        display: flex;
+
+        .containerList {
+            width: 100%;
+            height: 90%;
+            margin: auto;
+            display: inline-block;
+
+            h1 {
+                position: absolute;
+                margin-top: 0vh;
+                margin-left: 3vh;
+                color: rgb(4, 197, 223);
+            }
+
+            h2 {
+                color: whitesmoke;
+            }
+
+            .buttons {
+                width: 96%;
+                height: 50px;
+                margin: auto;
+                margin-top: 70px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+
+                button {
+                    width: 180px;
+                    height: 30px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: rgb(250, 244, 244);
+                    color: rgb(238, 238, 238);
+                    font-weight: bold;
+                    margin-right: 3vh;
+
+                    a {
+                        color: rgb(80, 79, 79);
+                        text-decoration: none;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .List {
+                width: 96%;
+                height: 70vh;
+                margin: auto;
+                margin-top: 4vh;
+
+                ul {
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+
+                    .pagination {
+                        margin-top: 100px;
+                        ul {
+                            width: auto;
+                            margin: auto;
+                            display: flex;
+                
+                            .page-item {
+                                width: 100%;
+                                margin: auto;
+                                border-bottom: none;
+
+
+                                .page-link {
+                                    height: 30px;
+                                    font-size: 10px;
+                                    margin: auto;
+                                    margin: 2vh;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    background-color: rgb(233, 229, 229);
+                                    font-weight: bold;
+                                }
+                            }
+                            
+                        }
+                    }
+
+                    .header {
+                        font-weight: bold;
+                        background-color: rgb(226, 226, 226);
+                        display: flex;
+                        width: 100%;
+                        height: 50px;
+                        list-style: none;
+                        align-items: center;
+
+                        span {
+                            width: 10%;
+                            color: rgb(29, 29, 29);
+                            flex: 1;
+                            padding: 5px;
+                            font-size: 14px;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        li {
+                            width: 100%;
+                            list-style: none;
+                            display: flex;
+                            margin-top: 1vh;
+                            align-items: center;
+                            border-bottom: 1px solid rgba(245, 245, 245, 0.171);
+    
+                            span {
+                                width: 10%;
+                                flex: 1;
+                                padding: 5px;
+                                color: whitesmoke;
+                                font-size: 14px;
+                                display: flex;
+                                align-items: center;
+              
+    
+                                h3 {
+                                    font-size: 15px;
+                                    margin-right: 2vh;
+                                }
+    
+                                .btn-edit {
+                                    width: 80px;
+                                    height: 20px;
+                                    background-color: blue;
+                                    margin-right: 2vh;
+                                    font-size: 12px;
+                                    border-radius: 5px;
+                                    border: none;
+                                    color: whitesmoke;
+    
+                                    a {
+                                        color: whitesmoke;
+                                        text-decoration: none;
+                                    }
+                                }
+                                .btn-delete {
+                                    width: 80px;
+                                    height: 20px;
+                                    background-color: rgb(243, 20, 20);
+                                    font-size: 12px;
+                                    margin-right: 2vh;
+                                    border-radius: 5px;
+                                    border: none;
+    
+                                    a {
+                                        color: whitesmoke;
+                                        text-decoration: none;
+                                    }
+                                }
+                                .btn-details {
+                                    width: 80px;
+                                    height: 20px;
+                                    background-color: rgb(238, 185, 11);
+                                    font-size: 12px;
+                                    border: none;
+                                    border-radius: 5px;
+                                    color: black;
+    
+                                    a {
+                                        color: black;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    
+                  }
+            }
+
+            
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .span-mobile-first-remove {
+        width: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+@media (max-width: 768px) {
+    .span-mobile-tableb-remove {
+        width: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .solicitacaoServico {
+     
+        .containerSolicitacaoServico {
+        
+            .containerList {
+
+                .buttons {
+   
+                    
+                    button {
+                       border-radius: 5px;
+                        a {
+                
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .solicitacaoServico {
+     
+        .containerSolicitacaoServico {
+        
+            .containerList {
+
+                .buttons {
+                    height: auto;
+                    
+                    button {
+                        width: 120px;
+                        height: 25px;
+                        margin-top: 1vh;
+                        border-radius: 5px;
+                        line-height: 12px;
+                        margin-left: 1vh;
+                        margin-right: 0;
+
+                        a {
+                            line-height: 0;
+                            font-size: 10px;
+                        }
+                    }
+                }
+    
+    
+                .List {
+                  
+                    ul {
+                        width: 95%;
+                        margin: auto;
+                        .header {
+                           
+                            span {
+                               font-size: 9px;
+                            }
+                        }
+                        a {
+                            li {
+                                span {
+                                    font-size: 9px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 450px) {
+    .solicitacaoServico {
+     
+        .containerSolicitacaoServico {
+        
+            .containerList {
+
+                .buttons {
+                
+
+                    button {
+                        height: 35px;
+                    }
+                }
+    
+    
+                .List {
+                  
+                    ul {
+                        
+                        .header {
+                           
+                            span {
+                               font-size: 8px;
+                            }
+                        }
+                        a {
+                            li {
+                                span {
+                                    font-size: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

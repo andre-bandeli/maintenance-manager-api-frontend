@@ -63,31 +63,33 @@ export default function SolicitacaoServico() {
                 <span>Código</span>
                 <span>Máquina</span>
                 <span>Setor</span>
-                <span>Solicitante</span>
-                <span>Descrição</span>
+                <span className='span-mobile-tableb-remove'>Solicitante</span>
+                <span className='span-mobile-first-remove'>Descrição</span>
                 <span>Data de abertura</span>
                 <span>Prioridade</span>
-                <span>Status</span>
-                <span> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
+                <span className='span-mobile-tableb-remove'>Status</span>
+                <span className='span-mobile-tableb-remove'>edit</span>
+                <span className='span-mobile-tableb-remove'> excluir</span>
+                <span className='span-mobile-first-remove'> ver</span>
+              
               </li>
               { currentSO.map(solicitacao => (
+              <Link to={`/ss/${solicitacao.id}`}>
               <li key={solicitacao.id}>
                 <span>{solicitacao.codigo}</span>
                 <span>{solicitacao.maquina}</span>
                 <span>{solicitacao.setor}</span>
-                <span>{solicitacao.nomeSolicitante}</span>
-                <span>{solicitacao.descricao}</span>
+                <span className='span-mobile-tableb-remove'>{solicitacao.nomeSolicitante}</span>
+                <span className='span-mobile-first-remove'>{solicitacao.descricao}</span>
                 <span>{solicitacao.dataSolicitacao}</span>
                 <span>{solicitacao.is_urgente ? "Urgente" : "Não Urgente"}</span>
-                <span>{solicitacao.status}</span>
-                <span>
-                  <button className='btn-edit'>edit</button>
-                  <button className='btn-delete' onClick={() => handleDelete(solicitacao.id)}> <Link to='/ss'>excluir</Link></button>
-                  <button className='btn-details'>
-                  <Link to={`/ss/${solicitacao.id}`}>
-                    ver + </Link> </button>
-                </span>
-              </li>
+                <span className='span-mobile-tableb-remove'>{solicitacao.status}</span>
+                <span className='span-mobile-tableb-remove'><button className='btn-edit'>edit</button></span>
+                <span className='span-mobile-tableb-remove'>  <button className='btn-delete' onClick={() => handleDelete(solicitacao.id)}> 
+                <Link to='/ss'>excluir</Link></button></span>
+                <span className='span-mobile-first-remove'>  <button className='btn-details' onClick={() => handleDelete(solicitacao.id)}> 
+                <Link to='/ss'>detalhes</Link></button></span>
+              </li></Link>
               ))}
                <Pagination
                     perPage={perPage}

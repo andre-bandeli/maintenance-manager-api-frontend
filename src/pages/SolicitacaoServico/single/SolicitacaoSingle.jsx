@@ -1,7 +1,7 @@
 import React from 'react'
 import './solicitacaoSingle.scss'
-import Footer from '../../components/footer/Footer'
-import Navbar from '../../components/darkNavbar/Navbar'
+import Footer from '../../../components/footer/Footer'
+import Navbar from '../../../components/darkNavbar/Navbar'
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 
