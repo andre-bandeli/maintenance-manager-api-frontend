@@ -14,7 +14,7 @@ export default function FormularioSolicitacao() {
     const [nomeSolicitante, setnomeSolicitante] = useState("")
     const [dataSolicitacao, setdataSolicitacao] = useState("")
     const [descricao, setDescricao] = useState("")
-    const [status, setStatus] = useState("")
+    const [status] = useState("true")
     const [is_urgente, setIs_urgente] = useState("")
 
     const onSubmit = (e) => {
@@ -24,7 +24,7 @@ export default function FormularioSolicitacao() {
 
       const handleClick=(e)=> {
         e.preventDefault()
-        const dados = {id, codigo, maquina,setor, nomeSolicitante, dataSolicitacao, descricao, is_urgente}
+        const dados = {id, codigo, maquina,setor, nomeSolicitante, dataSolicitacao, descricao, is_urgente, status}
         console.log(dados)
     
     
