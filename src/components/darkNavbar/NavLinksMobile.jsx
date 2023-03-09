@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
+import './navbar.scss'
 
 
 const NavLinksMobile = () => {
@@ -15,28 +16,31 @@ const NavLinksMobile = () => {
 
     return ( 
         <ul className="mob">
-            <li  className={active === '/' ? 'active' : ''}>
+            <li>
+                    <Link to="/home">Dashboard</Link>
+                </li>
+                <li>
+                    <Link to="/ss">Solicitação</Link>
+                </li>
+                <li>
+                    <Link to="/os">Ordens</Link>
+                </li>
+                <li>
+                    <Link to="/estoque">Estoque</Link>
+                </li>
+                <li>
+                    <Link to="/maquinas">Máquinas</Link>
+                </li>
+                <li>
+                    <Link to="/fornecedor">Fornecedores</Link>
+                </li>
+                <li>
+                    <Link to="/login">Financeiro</Link>
+                </li>
 
-                <Link to="/">Home</Link>
-            </li>
-            <li className={active === '/sobre' ? 'active' : ''}>
-                <Link to="/motocicletas">Sobre o Planejador</Link>
-            </li>
-            <li className={active === '/blog' ? 'active' : ''}>
-                <Link to="/motocicletas">Conheça Nosso Blog</Link>
-            </li>
-            <li className={active === '/guia' ? 'active' : ''}>
-                <Link to="/motocicletas">Como Utilizar o Planejador</Link>
-            </li>
-            <li className={active === '/cadastro' ? 'active' : ''}>
-                <Link to="/motocicletas">Cadastre sua Empresa</Link>
-            </li>
-            <li className={active === '/contatos' ? 'active' : ''}>
-                <Link to="/motocicletas">Conheça Nossas Redes</Link>
-            </li>
-            <li className={active === '/contatos' ? 'active' : ''}>
-                <Link to="/motocicletas">Sobre a API</Link>
-            </li>
+                <li>
+                    <Link to="/login">Manutentor</Link>
+                </li>
     </ul>
      );
     

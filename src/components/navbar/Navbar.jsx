@@ -1,6 +1,5 @@
 import React from 'react'
 import MobileNavigation from './MobileNavigation'
-import './navbar.scss'
 
 import { Link } from "react-router-dom";
 
@@ -19,6 +18,7 @@ export default function Navbar() {
                         <MobileNavigation/>
                     </div>
                     <h1>MAINTENANCE MANAGER</h1>
+                    
                 </li>
                
                 <li>

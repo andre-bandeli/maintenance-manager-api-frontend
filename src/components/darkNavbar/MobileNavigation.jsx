@@ -5,7 +5,7 @@ import NavLinksMobile from './NavLinksMobile';
 const MobileNavigation = () => {
 
     const hamburguerIcon = <CgMenu className='Hamburguer'size='40px' color='white' onClick={() => setOpen(!open)}/>
-    const closeIcon = <CgClose className='Hamburguer'size='30px' color='black' onClick={() => setOpen(!open)}/>
+    const closeIcon = <CgClose className='Hamburguer'size='30px' color='rgb(126, 122, 122)' onClick={() => setOpen(!open)}/>
 
     const [open, setOpen] = useState(false);
     return (  

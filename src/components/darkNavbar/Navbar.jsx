@@ -17,6 +17,7 @@ export default function Navbar() {
             <ul>
                 <li>
                 <Link to="/home">Maintenance <span>Manager</span></Link>
+                <Link to="/home" className='logo-responsive'>M <span>M</span></Link>
                 </li>
                 <li>
                     <div className="redes">
@@ -29,6 +30,7 @@ export default function Navbar() {
                 </li>
             </ul>
             <ul className='nav-inferior'>
+                <MobileNavigation/>
                 <li>
                     <Link to="/home">Dashboard</Link>
                 </li>
