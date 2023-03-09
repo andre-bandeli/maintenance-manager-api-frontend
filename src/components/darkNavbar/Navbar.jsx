@@ -1,6 +1,7 @@
 import React from 'react'
 import MobileNavigation from './MobileNavigation'
 import './navbar.scss'
+import './responsive.css'
 
 import { Link } from "react-router-dom";
 
