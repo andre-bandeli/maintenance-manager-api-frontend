@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './formularioSolicitacao.scss'
-
+import './responsive.css'
 
 
 export default function FormularioSolicitacao() {

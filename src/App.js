@@ -18,6 +18,8 @@ import IndexFornecedor from './pages/Fornecedor/IndexFornecedor';
 import IndexFormularioSolicitacao from './pages/SolicitacaoServico/forms/IndexFormularioSolicitacao';
 import SolicitacaoSingle from './pages/SolicitacaoServico/single/SolicitacaoSingle'
 import OrdemSingle from './pages/OrdemServico/single/OrdemSingle';
+import IndexFormularioMaquinas from './pages/Maquinas/forms/IndexFormularioMaquinas';
+import MaquinasSingle from './pages/Maquinas/single/MaquinasSingle'
 
 function App() {
 
@@ -76,8 +78,10 @@ function App() {
       <Route path="/new-solicitacao" element={<IndexFormularioSolicitacao />} />
       <Route path="/new-ordem" element={<IndexFormularioOrdemServico />} />
       <Route path="/new-produto" element={<IndexFormularioEstoque />} />
+      <Route path="/new-maquina" element={<IndexFormularioMaquinas />} />
       <Route path="/ss/:id" element={<SolicitacaoSingle />} />
       <Route path="/os/:id" element={<OrdemSingle />} />
+      <Route path="/maquinas/:id" element={<MaquinasSingle />} />
       <Route path="/estoque" element={<IndexEstoque />} />
       <Route path="/estoque/:id" element={<EstoqueSingle />} />
       <Route path="/fornecedor" element={<IndexFornecedor />} />

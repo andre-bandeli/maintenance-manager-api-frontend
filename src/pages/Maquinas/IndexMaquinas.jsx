@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../../components/darkNavbar/Navbar'
 import Footer from '../../components/footer/Footer'
-import Maquinas from './Maquinas'
-import './formularioMaquinas.scss'
+import Maquinas from './components/Maquinas'
+import './forms/formularioMaquinas.scss'
 
 export default function IndexMaquinas
 () {
