@@ -56,7 +56,7 @@ export default function Estoque() {
           <h1>Estoque</h1>
           <div className="buttons">
             <button>
-                <Link to="/new-ordem"> Adicionar Produto</Link>
+                <Link to="/new-produto"> Adicionar Produto</Link>
             </button>
             <button>
                 <Link to="/os"> gerar relatório</Link>
@@ -70,7 +70,7 @@ export default function Estoque() {
                 <span>Produto</span>
                 <span>Saldo Atual</span>
                 <span>Saldo Mínimo</span>
-                <span> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
+                <span className='span-mobile-tableb-remove'> <h3>edit</h3> <h3>entrada</h3> <h3>saída</h3></span>
               </li>
               { currentSO.map(estoque => (
               <li key={estoque.id}>
@@ -80,12 +80,12 @@ export default function Estoque() {
                 <span>{estoque.saldoMin}</span>
 
 
-                <span>
-                  <button className='btn-edit'>edit</button>
-                  <button className='btn-delete' onClick={() => handleDelete(estoque.id)}> <Link to='/ss'>excluir</Link></button>
+                <span className='span-mobile-tableb-remove'>
+                  <button className='btn-edit'> <Link to={`/estoque/${estoque.id}`}>edit</Link></button>
+                  <button className='btn-delete' onClick={() => handleDelete(estoque.id)}> <Link to='/ss'>entrada</Link></button>
                   <button className='btn-details'>
                   <Link to={`/ss/${estoque.id}`}>
-                    ver + </Link> </button>
+                    saída </Link> </button>
                 </span>
               </li>
               ))}

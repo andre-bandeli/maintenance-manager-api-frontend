@@ -1,15 +1,13 @@
-.indexEstoque {
-    background-image: linear-gradient(to left bottom, #1c1c1d, #1a1a1b, #181819, #151516, #131314);
-}
+
 
 .estoque {
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     display: flex;
 
     .containerEstoque {
         width: 95%;
-        height: 92%;
+        height: 95%;
         margin: auto;
         display: flex;
         display: flex;
@@ -38,23 +36,26 @@
                 margin-top: 70px;
                 display: flex;
                 align-items: center;
+                text-align: center;
 
                 button {
-                    width: 230px;
-                    height: 35px;
-                    border-radius: 5px;
-                    border: 1px solid white;
-                    background-color: transparent;
+                    width: 180px;
+                    height: 30px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: rgb(250, 244, 244);
                     color: rgb(238, 238, 238);
                     font-weight: bold;
                     margin-right: 3vh;
 
                     a {
-                        color: whitesmoke;
+                        color: rgb(80, 79, 79);
                         text-decoration: none;
+                        font-size: 14px;
                     }
                 }
             }
+
 
             .List {
                 width: 96%;
@@ -281,4 +282,63 @@
             
         }
     }
+}
+
+@media (max-width: 1440px) {
+    
+.estoque {
+    height: 150vh;
+    .containerEstoque {
+       width: 100%;
+       margin-bottom: 10vh;
+        .containerList {
+            width: 90%;
+            margin: auto;
+
+            .List {
+                width: 100%;
+                display: inline-block;
+                
+                .related {
+                    width: 100%;
+                    height: auto;
+
+                    .listaCompras {
+                        width: 100%;
+                        min-height: 100px;
+                        
+                        .btn-compras {
+                            margin-top: 0;
+                        }
+
+                        .header-l {
+                            width: 100%;
+                        }
+    
+                        ul {
+                          width: 100%;
+                        }
+                    }
+
+                    .listaEstoqueBaixo {
+                        width: 100%;
+                    }
+                }
+
+                ul {
+                  width: 100%;
+
+                    .header {
+
+                        .span-mobile-tableb-remove {
+                            width: 0;
+                            visibility: hidden;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 }
