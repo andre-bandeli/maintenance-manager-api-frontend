@@ -22,6 +22,8 @@ import OrdemSingle from './pages/OrdemServico/single/OrdemSingle';
 import IndexFormularioMaquinas from './pages/Maquinas/forms/IndexFormularioMaquinas';
 import MaquinasSingle from './pages/Maquinas/single/MaquinasSingle'
 import FornecedorSingle from './pages/Fornecedor/single/FornecedorSingle';
+import Manutentor from './pages/Manutentor/Manutentor';
+import IndexManutentor from './pages/Manutentor/IndexManutentor';
 
 function App() {
 
@@ -89,6 +91,7 @@ function App() {
       <Route path="/fornecedor" element={<IndexFornecedor />} />
       <Route path="/new-fornecedor" element={<IndexFormularioFornecedor />} />
       <Route path="/fornecedor/:id" element={<FornecedorSingle />} />
+      <Route path="/manutentor" element={<IndexManutentor />} />
       
   </Routes>
   );

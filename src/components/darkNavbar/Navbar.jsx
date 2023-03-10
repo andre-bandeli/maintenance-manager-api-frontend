@@ -55,7 +55,7 @@ export default function Navbar() {
                 </li>
 
                 <li>
-                    <Link to="/login">Manutentor</Link>
+                    <Link to="/manutentor">Manutentor</Link>
                 </li>
             </ul>
 
