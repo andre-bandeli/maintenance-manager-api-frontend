@@ -89,6 +89,10 @@
                 }
             }
         }
+        .box:hover {
+            margin-top: -2vh;
+            transition: .4s ease;
+        }
     }
 }
 

@@ -5,6 +5,9 @@ import imagem from './imagem.jpg'
 import imagem2 from './imagem2.webp'
 import imagem3 from './imagem3.jpg'
 import imagem4 from './imagem4.jpg'
+import imagem5 from './imagem5.jpg'
+import imagem6 from './imagem6.jpeg'
+
 
 
 
@@ -90,10 +93,10 @@ export default function Cards() {
         </div>
         <div className="box">
             <div className="imagem">
-                <img src={imagem} alt="" />
+                <img src={imagem5} alt="" />
             </div>
             <div className="title">
-                <h2>Manutenção Total Produtiva</h2>
+                <h2>Construindo indicadores</h2>
             </div>
             <div className="text">
                 <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quis nemo, 
@@ -109,10 +112,10 @@ export default function Cards() {
         </div>
         <div className="box">
             <div className="imagem">
-                <img src={imagem} alt="" />
+                <img src={imagem6} alt="" />
             </div>
             <div className="title">
-                <h2>Manutenção Total Produtiva</h2>
+                <h2>5W2H: Como utilizar?</h2>
             </div>
             <div className="text">
                 <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quis nemo, 
