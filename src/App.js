@@ -15,11 +15,13 @@ import EstoqueSingle from './pages/Estoque/single/EstoqueSingle'
 import IndexEstoque from './pages/Estoque/IndexEstoque';
 import IndexMaquinas from './pages/Maquinas/IndexMaquinas';
 import IndexFornecedor from './pages/Fornecedor/IndexFornecedor';
+import IndexFormularioFornecedor from './pages/Fornecedor/forms/IndexFormularioFornecedor';
 import IndexFormularioSolicitacao from './pages/SolicitacaoServico/forms/IndexFormularioSolicitacao';
 import SolicitacaoSingle from './pages/SolicitacaoServico/single/SolicitacaoSingle'
 import OrdemSingle from './pages/OrdemServico/single/OrdemSingle';
 import IndexFormularioMaquinas from './pages/Maquinas/forms/IndexFormularioMaquinas';
 import MaquinasSingle from './pages/Maquinas/single/MaquinasSingle'
+import FornecedorSingle from './pages/Fornecedor/single/FornecedorSingle';
 
 function App() {
 
@@ -85,6 +87,9 @@ function App() {
       <Route path="/estoque" element={<IndexEstoque />} />
       <Route path="/estoque/:id" element={<EstoqueSingle />} />
       <Route path="/fornecedor" element={<IndexFornecedor />} />
+      <Route path="/new-fornecedor" element={<IndexFormularioFornecedor />} />
+      <Route path="/fornecedor/:id" element={<FornecedorSingle />} />
+      
   </Routes>
   );
 }

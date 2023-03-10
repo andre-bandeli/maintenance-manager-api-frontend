@@ -44,10 +44,10 @@ export default function Fornecedor() {
     <div className='fornecedor'>
       <div className="containerFornecedor">
         <div className="containerList">
-          <h1>Fornecedor</h1>
+          <h1>Fornecedores</h1>
           <div className="buttons">
             <button>
-                <Link to="/new-ordem"> Adicinar Fornecedor</Link>
+                <Link to="/new-fornecedor"> Adicinar Fornecedor</Link>
             </button>
             <button>
                 <Link to="/os"> Gerar relatório</Link>
@@ -58,27 +58,27 @@ export default function Fornecedor() {
             <ul>
               <li className="header">
                 <span>Nome</span>
-                <span>Setor</span>
+                <span className='span-mobile-tableb-remove'>Setor</span>
                 <span>Nicho</span>
-                <span>CNPJ</span>
+                <span className='span-mobile-tableb-remove'>CNPJ</span>
                 <span>Contato</span>
                 <span>Email</span>
 
-                <span> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
+                <span className='span-mobile-tableb-remove'> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
               </li>
               { currentSO.map(fornecedor => (
               <li key={fornecedor.id}>
                 <span>{fornecedor.nome}</span>
-                <span>{fornecedor.setor}</span>
+                <span className='span-mobile-tableb-remove'>{fornecedor.setor}</span>
                 <span>{fornecedor.nicho}</span>
-                <span>{fornecedor.cnpj}</span>
+                <span className='span-mobile-tableb-remove'>{fornecedor.cnpj}</span>
                 <span>{fornecedor.contato}</span>
                 <span>{fornecedor.email}</span>
-                <span>
+                <span className='span-mobile-tableb-remove'>
                   <button className='btn-edit'>edit</button>
                   <button className='btn-delete' onClick={() => handleDelete(fornecedor.id)}> <Link to='/ss'>excluir</Link></button>
                   <button className='btn-details'>
-                  <Link to={`/ss/${fornecedor.id}`}>
+                  <Link to={`/fornecedor/${fornecedor.id}`}>
                     ver + </Link> </button>
                 </span>
               </li>

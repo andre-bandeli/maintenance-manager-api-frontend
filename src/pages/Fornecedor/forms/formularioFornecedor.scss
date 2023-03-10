@@ -1,13 +1,10 @@
-.indexFormularioMaquinas {
-    background-image: linear-gradient(to left bottom, #1c1c1d, #1a1a1b, #181819, #151516, #131314);
-}
 
-.formularioMaquinas {
+.formularioFornecedor {
     width: 100%;
-    height: 140vh;
+    height: 100vh;
     display: flex;
 
-    .containerFormularioMaquinas {
+    .containerFormularioFornecedor {
         width: 80%;
         height: 90%;
         margin: auto;

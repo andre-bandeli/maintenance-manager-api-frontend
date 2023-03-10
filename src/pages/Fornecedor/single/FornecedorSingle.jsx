@@ -1,22 +1,23 @@
 import React from 'react'
 import './fornecedorSingle.scss'
-import Footer from '../../components/footer/Footer'
-import Navbar from '../../components/darkNavbar/Navbar'
+
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
+import Navbar from '../../../components/darkNavbar/Navbar';
+import Footer from '../../../components/footer/Footer';
 
 export default function FornecedorSingle() {
 
-  const[ordem,setOrdem]=useState([]);
+  const[fornecedor,setFornecedor]=useState([]);
 
   const { id } = useParams();
-  const url = `http://localhost:8080/api/v1/os/get/${id}`;
+  const url = `http://localhost:8080/api/v1/fornecedor/getfornecedor/${id}`;
 
   useEffect(()=>{
       fetch(url)
       .then(res=>res.json())
       .then((result)=>{
-        setOrdem(result);
+        setFornecedor(result);
       }
     )
   },[])
@@ -27,26 +28,23 @@ export default function FornecedorSingle() {
         <Navbar/>
         <div className="containerSingle">
 
-          <h1>Solicitação de Serviço #{ordem.codigo}</h1>
+          <h1>{fornecedor.nome}</h1>
 
           <div className="box">
             <div className="md-3">
-                <h3>{ordem.maquina}</h3>
+                <h3>{fornecedor.setor}</h3>
             </div>
             <div className="md-3">
-            <h3>{ordem.setor}</h3>
+            <h3>{fornecedor.nicho}</h3>
               </div>
               <div className="md-3">
-              <h3>{ordem.nomeSolicitante}</h3>
+              <h3>{fornecedor.cnpj}</h3>
               </div>
               <div className="md-3">
-              <h3>{ordem.dataSolicitacao}</h3>
+              <h3>{fornecedor.contato}</h3>
               </div>
               <div className="md-10">
-              <h3>{ordem.descricao}</h3>
-              </div>
-              <div className="md-3">
-              <h3>{ordem.is_urgente}</h3>
+              <h3>{fornecedor.email}</h3>
               </div>
 
           </div>
