@@ -51,7 +51,7 @@ export default function Navbar() {
                     <Link to="/fornecedor">Fornecedores</Link>
                 </li>
                 <li>
-                    <Link to="/login">Financeiro</Link>
+                    <Link to="/financeiro">Financeiro</Link>
                 </li>
 
                 <li>

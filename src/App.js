@@ -24,6 +24,7 @@ import MaquinasSingle from './pages/Maquinas/single/MaquinasSingle'
 import FornecedorSingle from './pages/Fornecedor/single/FornecedorSingle';
 import Manutentor from './pages/Manutentor/Manutentor';
 import IndexManutentor from './pages/Manutentor/IndexManutentor';
+import IndexFinanceiro from './pages/Financeiro/IndexFinanceiro';
 
 function App() {
 
@@ -68,6 +69,9 @@ function App() {
       case '/manutentor':
         title = 'Blog';
         break;
+      case '/financeiro':
+        title = 'Financeiro';
+        break;
       default:
         title = 'Planejador de Manutenção Online';
         break;
@@ -98,6 +102,7 @@ function App() {
       <Route path="/new-fornecedor" element={<IndexFormularioFornecedor />} />
       <Route path="/fornecedor/:id" element={<FornecedorSingle />} />
       <Route path="/manutentor" element={<IndexManutentor />} />
+      <Route path="/financeiro" element={<IndexFinanceiro />} />
       
   </Routes>
   );
