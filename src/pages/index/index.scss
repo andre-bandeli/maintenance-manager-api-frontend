@@ -1,60 +1,47 @@
 .index {
     width: 100%;
-    height: 100vh;
+    height: 60vh;
 
     .main {
         width: 100%;
-        height: 100vh;
+        height: 60vh;
+        display: flex;
 
         .header {
             width: 100%;
-            height: 50vh;
-
-            .engrenagem {
-                width: 300px;
-                height: 300px;
-
-                margin: auto;
-                margin-top: 20vh;
-                background-image: url(./engrenagem.png);
-                background-position: center;
-                background-size: cover;
-                animation: rotation 7s infinite;
-                transform-origin: center;
-                opacity: .04;
-            }
-
+            height: 40vh;
+            margin: auto;
+            
             h1 {
-                font-size: 50px;
-                font-weight: bolder;
-                position: absolute;
-                margin-left: 32%;
-                margin-top: 9vh;
-                
+                color: whitesmoke;
+                margin-left: 20%;
+                margin-top: 70px;
+
+                span {
+                    color: rgb(4, 197, 223);
+                }
             }
             h2 {
-                font-size: 35px;
-                margin-left: 40%;
-                margin-top: 5vh;
-                position: absolute;
-                color: rgb(83, 81, 81);
+                width: 70%;
+                color: whitesmoke;
+                margin-left: 20%;
+                font-size: 20px;
+                font-weight: 200;
+                line-height: 30px;
             }
+          
 
             .buttons {
-                width: 30%;
-                height: 10vh;
-                margin: auto;
-                position: absolute;
-                margin-top: 15vh;
-                margin-left: 34%;
+     
                 display: flex;
-                z-index: 99;
+                width: 65%;
+                margin: auto;
 
-                .btnintro {
+                .btn-primary {
                     width: 250px;
-                    height: 60px;
+                    height: 30px;
                     margin-top: 2vh;
-                    margin-left: 2vh;
+                    margin-left: 5vh;
                     background-color: rgb(2, 162, 224);
                     border: none;
                     color: whitesmoke;
@@ -62,17 +49,29 @@
                     font-size: 16px;
                     cursor: pointer;
                     z-index: 99;
+
+                    a {
+                        color: whitesmoke;
+                        text-decoration: none;
+                    }
                 }
-                .btnextra {
+                .btn-secundary {
                     width: 250px;
-                    height: 60px;
+                    height: 30px;
                     margin-top: 2vh;
                     margin-left: 2vh;
-                    background-color: rgb(53, 52, 52);
-                    border: none;
-                    color: whitesmoke;
+                    background-color: rgb(47, 47, 48);
+                    border: 1px solid rgb(226, 226, 226);
                     font-weight: bolder;
                     font-size: 16px;
+                    cursor: pointer;
+                    z-index: 99;
+
+                    a {
+                        color: whitesmoke;
+                        text-decoration: none;
+                    }
+                    
                 }
             }
         }
@@ -81,15 +80,5 @@
             width: 100%;
             height: 50vh;
         }
-    }
-}
-
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
     }
 }

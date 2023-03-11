@@ -4,6 +4,8 @@ import { authenticate, authFailure, authSuccess } from '../../axios/actions';
 import {userLogin} from '../../axios/authService';
 import {Alert,Spinner} from 'react-bootstrap';
 import './login.scss'
+import { Link } from "react-router-dom";
+
 
 const Login=({loading,error,...props})=>{
 
@@ -141,6 +143,9 @@ const Login=({loading,error,...props})=>{
                             
         
                         </div>
+                        <button>
+                        <Link to="/">Conheça o projeto open source</Link>
+                        </button>
                     </div>
         </div>
     </section>

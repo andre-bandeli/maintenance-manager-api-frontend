@@ -58,45 +58,7 @@ export default function Cards() {
                 <img src={imagem4} alt="" />
             </div>
             <div className="title">
-                <h2>Segurança no Trabalho</h2>
-            </div>
-            <div className="text">
-                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quis nemo, 
-                    impedit esse necessitatibus facilis tenetur molestias quae delectus corrupti eaque 
-                    neque id atque repudiandae voluptas fuga accusantium quos repellat.</h3>
-            </div>
-            <div className="buttons">
-                <button>
-                    ler texto completo
-                </button>
-            </div>
-
-        </div>
-        <div className="box">
-            <div className="imagem">
-                <img src={imagem2} alt="" />
-            </div>
-            <div className="title">
-                <h2>Planejamento da Manutenção</h2>
-            </div>
-            <div className="text">
-                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quis nemo, 
-                    impedit esse necessitatibus facilis tenetur molestias quae delectus corrupti eaque 
-                    neque id atque repudiandae voluptas fuga accusantium quos repellat.</h3>
-            </div>
-            <div className="buttons">
-                <button>
-                    ler texto completo
-                </button>
-            </div>
-
-        </div>
-        <div className="box">
-            <div className="imagem">
-                <img src={imagem5} alt="" />
-            </div>
-            <div className="title">
-                <h2>Construindo indicadores</h2>
+                <h2>Planejamento de Manutenção</h2>
             </div>
             <div className="text">
                 <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quis nemo, 
@@ -115,7 +77,7 @@ export default function Cards() {
                 <img src={imagem6} alt="" />
             </div>
             <div className="title">
-                <h2>5W2H: Como utilizar?</h2>
+                <h2>Ferramentas da Qualidade</h2>
             </div>
             <div className="text">
                 <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quis nemo, 
@@ -129,44 +91,7 @@ export default function Cards() {
             </div>
 
         </div>
-        <div className="box">
-            <div className="imagem">
-                <img src={imagem} alt="" />
-            </div>
-            <div className="title">
-                <h2>Manutenção Total Produtiva</h2>
-            </div>
-            <div className="text">
-                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quis nemo, 
-                    impedit esse necessitatibus facilis tenetur molestias quae delectus corrupti eaque 
-                    neque id atque repudiandae voluptas fuga accusantium quos repellat.</h3>
-            </div>
-            <div className="buttons">
-                <button>
-                    ler texto completo
-                </button>
-            </div>
-
-        </div>
-        <div className="box">
-            <div className="imagem">
-                <img src={imagem} alt="" />
-            </div>
-            <div className="title">
-                <h2>Manutenção Total Produtiva</h2>
-            </div>
-            <div className="text">
-                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quis nemo, 
-                    impedit esse necessitatibus facilis tenetur molestias quae delectus corrupti eaque 
-                    neque id atque repudiandae voluptas fuga accusantium quos repellat.</h3>
-            </div>
-            <div className="buttons">
-                <button>
-                    ler texto completo
-                </button>
-            </div>
-
-        </div>
+        
     </div>
   )
 }

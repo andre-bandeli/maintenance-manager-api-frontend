@@ -6,7 +6,6 @@ import Login from './Login'
 export default function Index() {
   return (
     <div>
-        <Navbar/>
         <Login/>
         <Footer/>
     </div>

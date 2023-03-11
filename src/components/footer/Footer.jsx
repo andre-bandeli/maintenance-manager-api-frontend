@@ -36,14 +36,11 @@ export default function Footer() {
                 <h2>Acessos</h2>
                 <ul>
                     <li>
-                        <Link to="/">Login</Link>
+                        <Link to="/login">Login</Link>
 
                     </li>
                     <li>
-                        <Link to="/">Cadastre sua empresa</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Cadastre de funcionário</Link>
+                        <Link to="/">Cadastre-se para utilizar o planejador</Link>
                     </li>
 
                 </ul>

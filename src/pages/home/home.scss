@@ -1,18 +1,13 @@
-.IndexHome {
-    background-image: linear-gradient(to left bottom, #1c1c1d, #1a1a1b, #181819, #151516, #131314);
-}
-
-
 .home {
     width: 100%;
-    height: 180vh;
+    height: 210vh;
     display: flex;
 
     .containerHome {
         width: 95%;
         height: 95%;
         margin: auto;
-        
+
         h1 {
             width: 100%;
             text-align: center;
@@ -24,13 +19,13 @@
 
         .dash {
             width: 95%;
-            height: 90%;
+            height: 80%;
             margin: auto;
-            margin-top: 50px;
+            margin-top: 25px;
             display: flex;
             flex-wrap: wrap;
 
-           
+
             .bx-500 {
                 width: 29%;
                 height: 15vh;
@@ -52,14 +47,16 @@
                         margin: auto;
 
                         img {
-                            margin: -40px 95px ;
+                            margin-left: 5%;
+                            margin-top: -40px;
                         }
+
                         h3 {
                             font-size: 20px;
                         }
                     }
 
-                    
+
 
 
                 }
@@ -67,7 +64,8 @@
                 img {
                     position: absolute;
                     width: 20px;
-                    margin: -40px 150px;
+                    margin-left: 7%;
+                    margin-top: -40px;
                 }
 
                 h2 {
@@ -77,13 +75,14 @@
                     font-weight: bolder;
                     font-size: 40px;
                 }
+
                 h3 {
                     margin: auto;
                     width: 70%;
                     color: whitesmoke;
                     text-align: center;
                 }
-            
+
                 .content {
                     width: 90%;
                     height: 90%;
@@ -91,6 +90,14 @@
 
                     img {
                         margin: -60px 20px;
+                    }
+
+                    h2 {
+                        span {
+                            font-size: 27px;
+                            font-style: italic;
+                            color: rgba(31, 139, 240, 0.603);
+                        }
                     }
 
                     h4 {
@@ -102,12 +109,12 @@
                     }
 
                 }
-              
+
             }
 
             .bx-12 {
                 width: 95%;
-                height: 45vh;
+                height: auto;
                 margin-top: 1vh;
                 margin: auto;
                 margin-top: 5vh;
@@ -130,8 +137,8 @@
                         width: 100%;
                         padding: 0;
                         margin: 0;
-    
-    
+
+
                         .header {
                             font-weight: bold;
                             height: 25px;
@@ -140,7 +147,7 @@
                             width: 100%;
                             list-style: none;
                             align-items: center;
-    
+
                             span {
                                 width: 10%;
                                 color: rgb(29, 29, 29);
@@ -151,7 +158,7 @@
                                 align-items: center;
                             }
                         }
-    
+
                         li {
                             width: 100%;
                             list-style: none;
@@ -159,7 +166,7 @@
                             margin-top: 1vh;
                             align-items: center;
                             border-bottom: 1px solid rgba(245, 245, 245, 0.171);
-    
+
                             span {
                                 width: 10%;
                                 flex: 1;
@@ -168,13 +175,13 @@
                                 font-size: 14px;
                                 display: flex;
                                 align-items: center;
-              
-    
+
+
                                 h3 {
                                     font-size: 15px;
                                     margin-right: 2vh;
                                 }
-    
+
                                 .btn-edit {
                                     height: 20px;
                                     background-color: blue;
@@ -182,12 +189,13 @@
                                     font-size: 12px;
                                     border-radius: 5px;
                                     border: none;
-    
+
                                     a {
                                         color: whitesmoke;
                                         text-decoration: none;
                                     }
                                 }
+
                                 .btn-delete {
                                     height: 20px;
                                     background-color: rgb(243, 20, 20);
@@ -195,19 +203,20 @@
                                     margin-right: 2vh;
                                     border-radius: 5px;
                                     border: none;
-    
+
                                     a {
                                         color: whitesmoke;
                                         text-decoration: none;
                                     }
                                 }
+
                                 .btn-details {
                                     height: 20px;
                                     background-color: rgb(238, 185, 11);
                                     font-size: 12px;
                                     border: none;
                                     border-radius: 5px;
-    
+
                                     a {
                                         color: whitesmoke;
                                         text-decoration: none;
@@ -218,8 +227,134 @@
                     }
                 }
             }
+        }
+    }
+}
 
-           
+@media (max-width: 1440px) {
+
+    .span-mobile-tableb-remove {
+        width: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .home {
+
+        .containerHome {
+
+            .dash {
+
+                .bx-500 {
+
+                    .container-danger {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+
+
+    .home {
+
+        .containerHome {
+
+            .dash {
+
+                .bx-500 {
+
+                    .container-danger {
+                        width: 100%;
+
+          
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .home {
+
+
+        .containerHome {
+
+
+            .dash {
+
+
+                .bx-500 {
+
+
+                    .container-danger {
+                        width: 100%;
+
+                        .content {
+                            
+
+                            img {}
+
+                            h3 {
+                                font-size: 16px;
+                            }
+                        }
+
+
+
+
+                    }
+
+                    img {}
+
+                    h2 {
+                        font-size: 28px;
+
+                    }
+
+                    h3 {
+                        font-size: 17px;
+                    }
+
+
+                    .content {
+
+                        img {}
+
+                        h4 {
+                            width: 90%;
+                            font-size: 14px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+
+
+    .home {
+
+        .containerHome {
+
+            .dash {
+
+                .bx-500 {
+                    width: 48%;
+                }
+
+            }
         }
     }
 }

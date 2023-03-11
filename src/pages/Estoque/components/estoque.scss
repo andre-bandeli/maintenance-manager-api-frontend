@@ -74,7 +74,7 @@
                         width: 90%;
                         min-height: 400px;
                         height: auto;
-                        background-color: rgb(226, 226, 224);
+                        background-color: rgb(243, 243, 243);
                         margin: auto;
                         margin-top: 1vh;
                         display: inline-block;
@@ -110,6 +110,7 @@
                             height: 40px;
                             margin: 0;
                             background-color: rgb(255, 221, 30);
+                            background-color: rgb(243, 243, 243);
                             display: flex;
                             align-items: center;
 
@@ -145,7 +146,9 @@
                         width: 90%;
                         min-height: 200px;
                         height: auto;
-                        background-color: rgb(219, 0, 0);
+                        // background-color: rgb(219, 0, 0);
+                        border: 1px solid red;
+                        border-radius: 10px;
                         margin: auto;
                         margin-top: 50px;
                         display: inline-block;

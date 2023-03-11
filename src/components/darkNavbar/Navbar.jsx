@@ -22,10 +22,10 @@ export default function Navbar() {
                 </li>
                 <li>
                     <div className="redes">
-                        <Link to="https://www.linkedin.com/in/andrebandeli/"> <img src={linkedin} alt="ícone linkedin" /></Link>
-                        <Link to="https://github.com/andre-bandeli"> <img src={github} alt="ícone github" /></Link>
-                        <Link to="/usuario"> <img src={man} alt="ícone user"  /></Link> 
-                        <Link to="/login"><img src={login} alt="ícone github" /></Link>
+                        <Link to="https://www.linkedin.com/in/andrebandeli/" target='_blank'> <img src={linkedin} alt="ícone linkedin" /></Link>
+                        <Link to="https://github.com/andre-bandeli" target='_blank'> <img src={github} alt="ícone github" /></Link>
+                        <Link to="/usuario" target='_blank'> <img src={man} alt="ícone user"  /></Link> 
+                        <Link to="/login" target='_blank'><img src={login} alt="ícone github" /></Link>
                     </div>
 
                 </li>

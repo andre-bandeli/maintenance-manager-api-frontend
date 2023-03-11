@@ -153,7 +153,7 @@ export default function Home() {
     <div className='home'>
 
       <div className="containerHome">
-          <h1>Dashboard</h1>
+          <h1>Dashboard de Manutenção</h1>
           <div className="dash">
            
             <div className="bx-500">
@@ -200,7 +200,7 @@ export default function Home() {
             </div>
             <div className="bx-500">
               <div className="content">
-                <h2> R$ 15.000,00</h2>
+                <h2> <span>R$</span> 15.000,00</h2>
                 <h4>Saldo atual para gastos com manutenção</h4>
               </div>
              
@@ -208,12 +208,12 @@ export default function Home() {
             <div className="bx-500">
             <div className="content">
                 <h2> 72h</h2>
-                <h4>Backlog de Manutenção</h4>
+                <h4>Backlog Total de Manutenção Pendente</h4>
               </div>
             </div>
             <div className="bx-500">
               <div className="content">
-                  <h2> R$ 15.000,00</h2>
+                  <h2> <span>R$</span> 15.000,00</h2>
                   <h4>Saldo atual para Manutenção</h4>
                 </div>
             </div>
@@ -227,24 +227,24 @@ export default function Home() {
                 <span>Código</span>
                 <span>Máquina</span>
                 <span>Setor</span>
-                <span>Solicitante</span>
-                <span>Descrição</span>
-                <span>Data de abertura</span>
+                <span className='span-mobile-tableb-remove'>Solicitante</span>
+                <span className='span-mobile-tableb-remove'>Descrição</span>
+                <span className='span-mobile-tableb-remove'>Data de abertura</span>
                 <span>Prioridade</span>
-                <span>Status</span>
-                <span> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
+                <span className='span-mobile-tableb-remove'>Status</span>
+                <span className='span-mobile-tableb-remove'> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
               </li>
               { solicitacaoServico.map(solicitacao => (
               <li key={solicitacao.id}>
                 <span>{solicitacao.codigo}</span>
                 <span>{solicitacao.maquina}</span>
                 <span>{solicitacao.setor}</span>
-                <span>{solicitacao.nomeSolicitante}</span>
-                <span>{solicitacao.descricao}</span>
-                <span>{solicitacao.dataSolicitacao}</span>
+                <span className='span-mobile-tableb-remove'>{solicitacao.nomeSolicitante}</span>
+                <span className='span-mobile-tableb-remove'>{solicitacao.descricao}</span>
+                <span className='span-mobile-tableb-remove'>{solicitacao.dataSolicitacao}</span>
                 <span>{solicitacao.is_urgente ? "Urgente" : "Não Urgente"}</span>
-                <span>{solicitacao.status}</span>
-                <span>
+                <span className='span-mobile-tableb-remove'>{solicitacao.status}</span>
+                <span className='span-mobile-tableb-remove'>
                   <button className='btn-edit'>edit</button>
                   <button className='btn-delete' > <Link to='/ss'>excluir</Link></button>
                   <button className='btn-details'>
@@ -266,24 +266,24 @@ export default function Home() {
                 <span>Código</span>
                 <span>Máquina</span>
                 <span>Setor</span>
-                <span>Solicitante</span>
-                <span>Descrição</span>
-                <span>Data de abertura</span>
+                <span className='span-mobile-tableb-remove'>Solicitante</span>
+                <span className='span-mobile-tableb-remove'>Descrição</span>
+                <span className='span-mobile-tableb-remove'>Data de abertura</span>
                 <span>Prioridade</span>
-                <span>Status</span>
-                <span> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
+                <span className='span-mobile-tableb-remove'>Status</span>
+                <span className='span-mobile-tableb-remove'> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
               </li>
               { solicitacaoServico.map(solicitacao => (
               <li key={solicitacao.id}>
                 <span>{solicitacao.codigo}</span>
                 <span>{solicitacao.maquina}</span>
                 <span>{solicitacao.setor}</span>
-                <span>{solicitacao.nomeSolicitante}</span>
-                <span>{solicitacao.descricao}</span>
-                <span>{solicitacao.dataSolicitacao}</span>
+                <span className='span-mobile-tableb-remove'>{solicitacao.nomeSolicitante}</span>
+                <span className='span-mobile-tableb-remove'>{solicitacao.descricao}</span>
+                <span className='span-mobile-tableb-remove'>{solicitacao.dataSolicitacao}</span>
                 <span>{solicitacao.is_urgente ? "Urgente" : "Não Urgente"}</span>
-                <span>{solicitacao.status}</span>
-                <span>
+                <span className='span-mobile-tableb-remove'>{solicitacao.status}</span>
+                <span className='span-mobile-tableb-remove'>
                   <button className='btn-edit'>edit</button>
                   <button className='btn-delete' > <Link to='/ss'>excluir</Link></button>
                   <button className='btn-details'>
