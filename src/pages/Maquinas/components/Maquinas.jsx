@@ -64,24 +64,26 @@ export default function Maquinas() {
                 <span>Nível Prioridade</span>
                 <span>Em Operação</span>
 
-                <span className='span-mobile-tableb-remove'> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
+                <span className='span-mobile-tableb-remove'>edit</span>
+                <span className='span-mobile-tableb-remove'> excluir</span>
+                <span className='span-mobile-first-remove'> ver</span>
               </li>
               { currentSO.map(maquinas => (
+                <Link to={`/maquinas/${maquinas.id}`}>
               <li key={maquinas.id}>
                 <span>{maquinas.nome}</span>
                 <span>{maquinas.codigo}</span>
                 <span>{maquinas.setor}</span>
                 <span>{maquinas.dataInicioOperacao}</span>
                 <span>{maquinas.nivelPrioridade}</span>
-                <span>{maquinas.isActive}</span>
-                <span className='span-mobile-tableb-remove'>
-                  <button className='btn-edit'>edit</button>
-                  <button className='btn-delete' onClick={() => handleDelete(maquinas.id)}> <Link to='/ss'>excluir</Link></button>
-                  <button className='btn-details'>
-                  <Link to={`/maquinas/${maquinas.id}`}>
-                    ver + </Link> </button>
+                <span>{maquinas.emAtividade}</span>
+                <span className='span-mobile-tableb-remove'><button className='btn-edit'> edit</button>
                 </span>
-              </li>
+                <span className='span-mobile-tableb-remove'>  <button className='btn-delete' onClick={() => handleDelete(maquinas.id)}> 
+                <Link to='/maquinas'>excluir</Link></button></span>
+                <span className='span-mobile-first-remove'>  <button className='btn-details'> 
+                <Link to={`/maquinas/${maquinas.id}`}>detalhes</Link></button></span>
+              </li></Link>
               ))}
                <Pagination
                     perPage={perPage}

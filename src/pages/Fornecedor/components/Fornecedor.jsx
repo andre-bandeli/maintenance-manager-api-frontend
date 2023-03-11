@@ -64,9 +64,12 @@ export default function Fornecedor() {
                 <span>Contato</span>
                 <span>Email</span>
 
-                <span className='span-mobile-tableb-remove'> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
+                <span className='span-mobile-tableb-remove'>edit</span>
+                <span className='span-mobile-tableb-remove'> excluir</span>
+                <span className='span-mobile-first-remove'> ver</span>
               </li>
               { currentSO.map(fornecedor => (
+                <Link to={`/fornecedor/${fornecedor.id}`}>
               <li key={fornecedor.id}>
                 <span>{fornecedor.nome}</span>
                 <span className='span-mobile-tableb-remove'>{fornecedor.setor}</span>
@@ -74,14 +77,13 @@ export default function Fornecedor() {
                 <span className='span-mobile-tableb-remove'>{fornecedor.cnpj}</span>
                 <span>{fornecedor.contato}</span>
                 <span>{fornecedor.email}</span>
-                <span className='span-mobile-tableb-remove'>
-                  <button className='btn-edit'>edit</button>
-                  <button className='btn-delete' onClick={() => handleDelete(fornecedor.id)}> <Link to='/ss'>excluir</Link></button>
-                  <button className='btn-details'>
-                  <Link to={`/fornecedor/${fornecedor.id}`}>
-                    ver + </Link> </button>
+                <span className='span-mobile-tableb-remove'><button className='btn-edit'> edit</button>
                 </span>
-              </li>
+                <span className='span-mobile-tableb-remove'>  <button className='btn-delete' onClick={() => handleDelete(fornecedor.id)}> 
+                <Link to='/fornecedor'>excluir</Link></button></span>
+                <span className='span-mobile-first-remove'>  <button className='btn-details'> 
+                <Link to={`/fornecedor/${fornecedor.id}`}>detalhes</Link></button></span>
+              </li></Link>
               ))}
                <Pagination
                     perPage={perPage}

@@ -31,18 +31,23 @@ export default function FornecedorSingle() {
           <h1>{fornecedor.nome}</h1>
 
           <div className="box">
+            <h2>Setor</h2>
             <div className="md-3">
                 <h3>{fornecedor.setor}</h3>
             </div>
+            <h2>Nicho</h2>
             <div className="md-3">
             <h3>{fornecedor.nicho}</h3>
               </div>
+              <h2>CNPJ</h2>
               <div className="md-3">
               <h3>{fornecedor.cnpj}</h3>
               </div>
+              <h2>Contato</h2>
               <div className="md-3">
               <h3>{fornecedor.contato}</h3>
               </div>
+              <h2>Email</h2>
               <div className="md-10">
               <h3>{fornecedor.email}</h3>
               </div>

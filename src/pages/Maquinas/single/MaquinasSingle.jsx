@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 
 export default function MaquinasSingle() {
 
-  const[ordem,setOrdem]=useState([]);
+  const[maquina,setMaquina]=useState([]);
 
   const { id } = useParams();
   const url = `http://localhost:8080/api/v1/maquinas/getmaquina/${id}`;
@@ -16,7 +16,7 @@ export default function MaquinasSingle() {
       fetch(url)
       .then(res=>res.json())
       .then((result)=>{
-        setOrdem(result);
+        setMaquina(result);
       }
     )
   },[])
@@ -27,28 +27,29 @@ export default function MaquinasSingle() {
         <Navbar/>
         <div className="containerSingle">
 
-          <h1>{ordem.codigo}</h1>
+          <h1>{maquina.nome}</h1>
 
           <div className="box">
+            <h2>Máquina</h2>
             <div className="md-3">
-                <h3>{ordem.nome}</h3>
+                <h3>{maquina.nome}</h3>
             </div>
+            <h2>Código</h2>
             <div className="md-3">
-            <h3>{ordem.setor}</h3>
+            <h3>{maquina.codigo}</h3>
               </div>
+              <h2>Setor</h2>
               <div className="md-3">
-              <h3>{ordem.nomeSolicitante}</h3>
+              <h3>{maquina.setor}</h3>
               </div>
+              <h2>Data de ínicio operação</h2>
               <div className="md-3">
-              <h3>{ordem.dataSolicitacao}</h3>
+              <h3>{maquina.data_inicio_operacao}</h3>
               </div>
+              <h2>Em operação</h2>
               <div className="md-10">
-              <h3>{ordem.descricao}</h3>
+              <h3>{maquina.emAtividade}</h3>
               </div>
-              <div className="md-3">
-              <h3>{ordem.is_urgente}</h3>
-              </div>
-
           </div>
 
         </div>
