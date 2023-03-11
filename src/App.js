@@ -25,6 +25,7 @@ import FornecedorSingle from './pages/Fornecedor/single/FornecedorSingle';
 import Manutentor from './pages/Manutentor/Manutentor';
 import IndexManutentor from './pages/Manutentor/IndexManutentor';
 import IndexFinanceiro from './pages/Financeiro/IndexFinanceiro';
+import Sobre from './pages/sobre/Sobre';
 
 function App() {
 
@@ -103,6 +104,7 @@ function App() {
       <Route path="/fornecedor/:id" element={<FornecedorSingle />} />
       <Route path="/manutentor" element={<IndexManutentor />} />
       <Route path="/financeiro" element={<IndexFinanceiro />} />
+      <Route path="/sobre" element={<Sobre />} />
       
   </Routes>
   );

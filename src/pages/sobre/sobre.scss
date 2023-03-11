@@ -1,0 +1,84 @@
+.sobre {
+    width: 100%;
+    height: 60vh;
+
+    .main {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+
+        .header {
+            width: 100%;
+            height: 30vh;
+            margin: auto;
+            
+            h1 {
+                color: whitesmoke;
+                margin-left: 20%;
+                margin-top: 70px;
+
+                span {
+                    color: rgb(4, 197, 223);
+                }
+            }
+            h2 {
+                width: 70%;
+                color: whitesmoke;
+                margin-left: 20%;
+                font-size: 20px;
+                font-weight: 200;
+                line-height: 30px;
+            }
+          
+
+            .buttons {
+     
+                display: flex;
+                width: 65%;
+                margin: auto;
+
+                .btn-primary {
+                    width: 250px;
+                    height: 30px;
+                    margin-top: 2vh;
+                    margin-left: 5vh;
+                    background-color: rgb(2, 162, 224);
+                    border: none;
+                    color: whitesmoke;
+                    font-weight: bolder;
+                    font-size: 16px;
+                    cursor: pointer;
+                    z-sobre: 99;
+
+                    a {
+                        color: whitesmoke;
+                        text-decoration: none;
+                    }
+                }
+                .btn-secundary {
+                    width: 250px;
+                    height: 30px;
+                    margin-top: 2vh;
+                    margin-left: 2vh;
+                    background-color: rgb(47, 47, 48);
+                    border: 1px solid rgb(226, 226, 226);
+                    font-weight: bolder;
+                    font-size: 16px;
+                    cursor: pointer;
+                    z-sobre: 99;
+
+                    a {
+                        color: whitesmoke;
+                        text-decoration: none;
+                    }
+                    
+                }
+            }
+        }
+
+        .containersobre {
+            width: 100%;
+            height: 50vh;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+
+.carouselContainer {
+    height: 40vh;
+    width: 100%;
+    top: 0;
+    display: inline-block;
+
+    .carouselBootstrap {
+        height: 40vh;
+        width: 100%;
+        .carouselItem {
+            height: 40vh;
+            width: 100%;
+
+    
+            img {
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+            }
+    
+            .carouselItemContent {
+                height: 80%;
+                margin: 10vh 25vh;
+    
+                h2 {
+                    width: 40%;
+                    line-height: normal;
+                    font-weight: 600;
+                    font-size: 40px;
+                    margin-left: 0;
+                }
+        
+                h3 {
+                    margin-left: 0;
+                    color: whitesmoke;
+                    font-weight: 200;
+                    font-size: 22px;
+                }
+
+
+               
+                button {
+     
+                    border: none;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    font-size: 18px;
+                    font-weight: bolder;
+                    height: 50px;
+                    margin-top: 5vh;
+                    width: 250px;
+                    -webkit-backdrop-filter: blur( 5.5px );
+                    backdrop-filter: blur( 6.5px );
+                    
+                    a {
+ 
+                        font-weight: bolder;
+                        text-decoration: none;
+                    }
+                }
+
+
+            }
+        }
+    }
+}    

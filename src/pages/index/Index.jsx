@@ -19,7 +19,7 @@ export default function Index() {
                 <Link to='/home'>Acesse a página Home</Link>
               </button>
               <button className='btn-secundary'>
-              <Link to='/home'>Conheça mais sobre o app</Link>
+              <Link to='/sobre'>Conheça mais sobre o app</Link>
               </button>
               
               
