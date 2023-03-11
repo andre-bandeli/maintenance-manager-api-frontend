@@ -144,7 +144,7 @@ const Login=({loading,error,...props})=>{
         
                         </div>
                         <button>
-                        <Link to="/">Conheça o projeto open source</Link>
+                        <Link to="/">Voltar para a página inicial</Link>
                         </button>
                     </div>
         </div>

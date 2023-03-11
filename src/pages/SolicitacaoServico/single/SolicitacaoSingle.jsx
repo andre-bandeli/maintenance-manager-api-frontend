@@ -30,23 +30,34 @@ export default function SolicitacaoSingle() {
           <h1>Solicitação de Serviço #{solicitacao.codigo}</h1>
 
           <div className="box">
+            <h2>Máquina</h2>
             <div className="md-3">
                 <h3>{solicitacao.maquina}</h3>
             </div>
+
+            <h2>Setor</h2>
             <div className="md-3">
-            <h3>{solicitacao.setor}</h3>
-              </div>
-              <div className="md-3">
+              <h3>{solicitacao.setor}</h3>
+            </div>
+            <h2>Nome da pessoa solicitante</h2>
+            <div className="md-3">
               <h3>{solicitacao.nomeSolicitante}</h3>
               </div>
+              <h2>Data de abertura do chamado</h2>
               <div className="md-3">
               <h3>{solicitacao.dataSolicitacao}</h3>
               </div>
+              <h2>Breve descrição do problema</h2>
               <div className="md-10">
               <h3>{solicitacao.descricao}</h3>
               </div>
+              <h2>Prioridade</h2>
               <div className="md-3">
               <h3>{solicitacao.is_urgente}</h3>
+              </div>
+              <h2>Status</h2>
+              <div className="md-3">
+              <h3>{solicitacao.status}</h3>
               </div>
 
           </div>

@@ -62,6 +62,12 @@ function App() {
       case '/new-estoque':
         title = 'Adicionar Estoque';
         break;
+      case '/fornecedor':
+        title = 'Fornecedores';
+        break;
+      case '/manutentor':
+        title = 'Blog';
+        break;
       default:
         title = 'Planejador de Manutenção Online';
         break;

@@ -1,11 +1,7 @@
 import React from 'react'
 import './home.scss'
 import { Link } from "react-router-dom";
-import check from './confirme.png'
-import cancelar from './cancelar.png'
-import MenuLateral from '../../components/menuLateral/MenuLateral';
 import { useEffect, useState } from 'react';
-
 import seta from './seta.png'
 
 export default function Home() {
@@ -15,6 +11,8 @@ export default function Home() {
   const [ordemServicoClosed, setOrdemServicoClosed] = useState([]);
   const [ordemServicoEmAndamento, setOrdemServicoEmAndamento] = useState([]);
   const [listaCompras, setListaCompras] = useState([]);
+  const [estoqueBaixo, setEstoqueBaixo] = useState([]);
+  const [contadorEstoqueBaixo, setContadorEstoqueBaixo] = useState(0);
   const [contador_ordem, set_contador_ordem] = useState(0);
   const [contador_solicitacao, set_contador_solicitacao] = useState(0);
   const [contador_ordem_closed, set_contador_ordem_closed] = useState(0);
@@ -28,6 +26,16 @@ export default function Home() {
       .then(data => {
         setListaCompras(data);
         set_contador_lista_compras(0);
+      })
+      .catch(error => console.error(error))
+  }, []);
+
+  useEffect(() => {
+    fetch('http://localhost:8080/api/v1/produto/get/estoque-baixo')
+      .then(response => response.json())
+      .then(data => {
+        setEstoqueBaixo(data);
+        setContadorEstoqueBaixo(0);
       })
       .catch(error => console.error(error))
   }, []);
@@ -72,7 +80,20 @@ export default function Home() {
       .catch(error => console.error(error))
   }, []);
 
-  
+  useEffect(() => {
+    const intervalE = setInterval(() => {
+      setContadorEstoqueBaixo(prevCount => {
+        if (prevCount >= estoqueBaixo.length) {
+          clearInterval(intervalE);
+          return estoqueBaixo.length;
+        } else {
+          return prevCount + 1;
+        }
+      });
+    }, 200);
+
+    return () => clearInterval(intervalE);
+  }, [estoqueBaixo]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -103,6 +124,8 @@ export default function Home() {
 
     return () => clearInterval(intervalIdSO);
   }, [solicitacaoServico]);
+
+  
 
   useEffect(() => {
     const intervalIdOSC = setInterval(() => {
@@ -149,6 +172,35 @@ export default function Home() {
     return () => clearInterval(intervalIdOSC);
   }, [listaCompras]);
 
+  const handleDelete = (id) => {
+    fetch(`http://localhost:8080/api/v1/solicitacao/remove/${id}`, {
+      method: 'DELETE',
+    })
+    .then(response => {
+      if (response.ok) {
+        setSolicitacaoServico(solicitacaoServico.filter(s => s.id !== id));
+      } else {
+        throw new Error('Erro ao excluir a solicitação.');
+      }
+    })
+    .catch(error => console.error(error));
+  };
+
+  const handleDeleteOrdem = (id) => {
+    fetch(`http://localhost:8080/api/v1/ordem/delete/${id}`, {
+      method: 'DELETE',
+    })
+    .then(response => {
+      if (response.ok) {
+        setOrdemServico(ordemServico.filter(s => s.id !== id));
+      } else {
+        throw new Error('Erro ao excluir a ordem.');
+      }
+    })
+    .catch(error => console.error(error));
+  };
+
+
   return (
     <div className='home'>
 
@@ -183,7 +235,7 @@ export default function Home() {
             <div className="bx-500">
             <div className="container-danger">
                 <div className='content'>
-                    <h2>{ordemServico.length}</h2>
+                    <h2>{estoqueBaixo.length}</h2>
                     <img src={seta} alt="" />
                     <h3>Produtos com estoque baixo</h3>
                 </div>
@@ -234,7 +286,9 @@ export default function Home() {
                 <span className='span-mobile-tableb-remove'>Status</span>
                 <span className='span-mobile-tableb-remove'> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
               </li>
+              
               { solicitacaoServico.map(solicitacao => (
+                <Link to={`/ss/${solicitacao.id}`}>
               <li key={solicitacao.id}>
                 <span>{solicitacao.codigo}</span>
                 <span>{solicitacao.maquina}</span>
@@ -246,12 +300,12 @@ export default function Home() {
                 <span className='span-mobile-tableb-remove'>{solicitacao.status}</span>
                 <span className='span-mobile-tableb-remove'>
                   <button className='btn-edit'>edit</button>
-                  <button className='btn-delete' > <Link to='/ss'>excluir</Link></button>
+                  <button className='btn-delete' onClick={() => handleDelete(solicitacao.id)} > <Link to='/home'>excluir</Link></button>
                   <button className='btn-details'>
                   <Link to={`/ss/${solicitacao.id}`}>
                     ver + </Link> </button>
                 </span>
-              </li>
+              </li></Link>
               ))}
             
             </ul>
@@ -273,24 +327,25 @@ export default function Home() {
                 <span className='span-mobile-tableb-remove'>Status</span>
                 <span className='span-mobile-tableb-remove'> <h3>edit</h3> <h3>excluir</h3> <h3>ver +</h3></span>
               </li>
-              { solicitacaoServico.map(solicitacao => (
-              <li key={solicitacao.id}>
-                <span>{solicitacao.codigo}</span>
-                <span>{solicitacao.maquina}</span>
-                <span>{solicitacao.setor}</span>
-                <span className='span-mobile-tableb-remove'>{solicitacao.nomeSolicitante}</span>
-                <span className='span-mobile-tableb-remove'>{solicitacao.descricao}</span>
-                <span className='span-mobile-tableb-remove'>{solicitacao.dataSolicitacao}</span>
-                <span>{solicitacao.is_urgente ? "Urgente" : "Não Urgente"}</span>
-                <span className='span-mobile-tableb-remove'>{solicitacao.status}</span>
+              { ordemServico.map(ordem => (
+                <Link to={`/os/${ordem.id}`}>
+              <li key={ordem.id}>
+                <span>{ordem.codigo}</span>
+                <span>{ordem.maquina}</span>
+                <span>{ordem.setor}</span>
+                <span className='span-mobile-tableb-remove'>{ordem.nomeSolicitante}</span>
+                <span className='span-mobile-tableb-remove'>{ordem.descricao}</span>
+                <span className='span-mobile-tableb-remove'>{ordem.dataSolicitacao}</span>
+                <span>{ordem.is_urgente ? "Urgente" : "Não Urgente"}</span>
+                <span className='span-mobile-tableb-remove'>{ordem.status}</span>
                 <span className='span-mobile-tableb-remove'>
                   <button className='btn-edit'>edit</button>
-                  <button className='btn-delete' > <Link to='/ss'>excluir</Link></button>
+                  <button className='btn-delete' onClick={() => handleDeleteOrdem(ordem.id)} > <Link to='/home'>excluir</Link></button>
                   <button className='btn-details'>
-                  <Link to={`/ss/${solicitacao.id}`}>
+                  <Link to={`/os/${ordem.id}`}>
                     ver + </Link> </button>
                 </span>
-              </li>
+              </li></Link>
               ))}
             
             </ul>

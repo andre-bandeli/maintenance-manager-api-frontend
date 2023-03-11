@@ -9,6 +9,7 @@ export default function Estoque() {
 
   const [estoque, setEstoque] = useState([]);
   const [listaCompra, setListaCompra] = useState([]);
+  const [estoqueBaixo, setEstoqueBaixo] = useState([]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [perPage] = useState(10);
@@ -22,6 +23,13 @@ export default function Estoque() {
   }, []);
 
   useEffect(() => {
+    fetch('http://localhost:8080/api/v1/produto/get/estoque-baixo')
+      .then(response => response.json())
+      .then(data => setEstoqueBaixo(data))
+      .catch(error => console.error(error))
+  }, []);
+
+  useEffect(() => {
     fetch('http://localhost:8080/api/v1/compras/list')
       .then(response => response.json())
       .then(data => setListaCompra(data))
@@ -29,7 +37,7 @@ export default function Estoque() {
   }, []);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:8080/api/v1/os/remove/${id}`, {
+    fetch(`http://localhost:8080/api/v1/produto/remove/${id}`, {
       method: 'DELETE',
     })
     .then(response => {
@@ -70,9 +78,13 @@ export default function Estoque() {
                 <span>Produto</span>
                 <span>Saldo Atual</span>
                 <span>Saldo Mínimo</span>
-                <span className='span-mobile-tableb-remove'> <h3>edit</h3> <h3>entrada</h3> <h3>saída</h3></span>
+                <span className='span-mobile-tableb-remove'>Editar</span>
+                <span className='span-mobile-tableb-remove'>Entrada</span>
+                <span className='span-mobile-tableb-remove'>Saída</span>
+                <span className='span-mobile-tableb-remove'>Excluir</span>
               </li>
               { currentSO.map(estoque => (
+                <Link to={`/estoque/${estoque.id}`}>
               <li key={estoque.id}>
                 <span>{estoque.codigo}</span>
                 <span>{estoque.nome}</span>
@@ -80,14 +92,20 @@ export default function Estoque() {
                 <span>{estoque.saldoMin}</span>
 
 
-                <span className='span-mobile-tableb-remove'>
-                  <button className='btn-edit'> <Link to={`/estoque/${estoque.id}`}>edit</Link></button>
-                  <button className='btn-delete' onClick={() => handleDelete(estoque.id)}> <Link to='/ss'>entrada</Link></button>
-                  <button className='btn-details'>
-                  <Link to={`/ss/${estoque.id}`}>
-                    saída </Link> </button>
+                <span className='span-mobile-tableb-remove'><button className='btn-edit'> edit</button>
                 </span>
-              </li>
+                <span className='span-mobile-first-remove'><button className='btn-entrada'> 
+                <Link to={`/estoque/${estoque.id}`}>entrada</Link></button></span>
+                <span className='span-mobile-first-remove'>  <button className='btn-saida'> 
+                <Link to={`/estoque/${estoque.id}`}>saída</Link></button></span>
+                <span className='span-mobile-tableb-remove'>  <button className='btn-delete' onClick={() => handleDelete(estoque.id)}> 
+                <Link to='/estoque'>delete</Link></button></span>
+
+                
+                
+          
+                 
+              </li></Link>
               ))}
                <Pagination
                     perPage={perPage}
@@ -126,6 +144,13 @@ export default function Estoque() {
               </ul>
               <ul className='listaEstoqueBaixo'>
                   <h2>Estoque Baixo</h2>
+
+                  { estoqueBaixo.map(estoqueBaixo => (
+                  <li key={estoqueBaixo.id}>
+                    <span>{estoqueBaixo.nome}</span>
+                    <span>{estoqueBaixo.saldo}</span>
+                  </li>
+              ))}
               </ul>
             </div>
            

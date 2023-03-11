@@ -81,7 +81,7 @@ export default function OrdemServico() {
                 <span>{ordem.setor}</span>
                 <span className='span-mobile-tableb-remove'>{ordem.nomeSolicitante}</span>
                 <span className='span-mobile-first-remove'>{ordem.descricao}</span>
-                <span>{ordem.dataordem}</span>
+                <span>{ordem.dataSolicitacao}</span>
                 <span>{ordem.is_urgente ? "Urgente" : "Não Urgente"}</span>
                 <span className='span-mobile-tableb-remove'>{ordem.status}</span>
                 <span className='span-mobile-tableb-remove'>{ordem.dataFechamento}</span>
@@ -90,7 +90,7 @@ export default function OrdemServico() {
                 <span className='span-mobile-tableb-remove'><button className='btn-edit'> edit</button>
                 </span>
                 <span className='span-mobile-tableb-remove'>  <button className='btn-delete' onClick={() => handleDelete(ordem.id)}> 
-                <Link to='/ss'>excluir</Link></button></span>
+                <Link to='/os'>excluir</Link></button></span>
                 <span className='span-mobile-first-remove'>  <button className='btn-details'> 
                 <Link to={`/os/${ordem.id}`}>detalhes</Link></button></span>
               </li></Link>
