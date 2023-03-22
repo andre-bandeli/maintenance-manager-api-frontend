@@ -1,13 +1,15 @@
-## MaintenanceManager API React 
+## MaintenanceManager API Front-end React
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
 
+Esta é uma aplicação que está sendo desenvolvida para a Gestão e Planejamento de Manutenções. O frontend foi construído utilizando a biblioteca React, que permite a criação de interfaces de usuário interativas e responsivas. Já o backend foi implementado em Java com Spring Boot, oferecendo uma estrutura robusta para o gerenciamento dos dados e das operações de negócio. O banco de dados utilizado é o MySQL, que fornece confiabilidade e escalabilidade para a aplicação. Todos os testes foram realizados utilizando o framework Junit, garantindo a qualidade e a estabilidade do código. O resultado final é um sistema completo, intuitivo e seguro para gerenciar as manutenções de sua empresa.
+
 ## Website Status
 ![BADGE](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)
 
-- Deploy frontend (host Vercel): [vercel app](https://webstorecar.vercel.app/)
-
+- Deploy frontend (host Vercel): [vercel app](https://maintenance-manager-api-frontend.vercel.app/)
+- Projeto Back-end: [github](https://github.com/andre-bandeli/maintenance-manager-api-spring-boot)
 
 ## Começando
 
@@ -32,6 +34,8 @@ docker:  20.10.17
 ```
 
 ### 🔧 Instalação
+
+Clone o repositório da aplicação de back-end [clique aqui](https://maintenance-manager-api-frontend.vercel.app/) e execute a aplicação. Caso necessário, leia o README para deploy local da aplicação spring boot. 
 ![BADGE](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 O seguinte resultado é esperado:
@@ -40,10 +44,8 @@ O seguinte resultado é esperado:
 seguido dos logs
 ![springboot_logs](https://user-images.githubusercontent.com/87938869/212789258-d7ac1cb6-3907-4583-857c-f48479c605ee.png)
 
-Nesse momento, estamos com nossa aplicação backend (server) disponivel em nosso servidor local. Precisamos agora iniciar nosso projeto frontend (client) 
-```
- cd springboot-api-crud-java-react/page
-```
+Nesse momento, estamos com nossa aplicação backend (server) disponivel em nosso servidor local. Precisamos agora iniciar nosso projeto frontend (client). Execute os seguintes comandos (caminhe até a pasta root):
+
 ```
  npm install
 ```
@@ -54,15 +56,17 @@ Nesse momento, estamos com nossa aplicação backend (server) disponivel em noss
 
 
 ## 📛 Page Speed
-![Captura de tela de 2023-02-03 04-00-44_Easy-Resize com](https://user-images.githubusercontent.com/87938869/216533939-a66d20db-bed1-4ae8-ba94-e29abd9021f2.jpg)
-![Captura de tela de 2023-02-03 04-00-51_Easy-Resize com](https://user-images.githubusercontent.com/87938869/216533884-b80ca3ab-187b-4cb5-b843-7f39db4599ef.jpg)
+
+
+## 🛠️ Features
+
+- Implementar regra de negócios estoque
+- Correção bug JWT token LocalStorage 
+
 
 
 ## 🛠️ Construído com
 
-* [Java](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html) - Linguagem backend
-* [Spring Boot](https://spring.io/projects/spring-boot) - Framework Web Java
-* [Maven](https://maven.apache.org/) - Gerenciador de Dependência
 * [React JS](https://pt-br.reactjs.org/) - Biblioteca JavaScript
 * [Docker](https://www.docker.com/) - Virtualização open source
 
