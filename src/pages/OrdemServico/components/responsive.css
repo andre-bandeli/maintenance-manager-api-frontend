@@ -1,0 +1,71 @@
+@media (max-width: 1024px) {
+    .span-mobile-first-remove {
+        width: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+@media (max-width: 768px) {
+    .span-mobile-tableb-remove {
+        width: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .ordemServico .containerOrdemServico .containerList .buttons button {
+        border-radius: 5px;
+    }
+
+    .ordemServico .containerOrdemServico .containerList .buttons button a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .ordemServico .containerOrdemServico .containerList .buttons {
+        height: auto;
+    }
+
+    .ordemServico .containerOrdemServico .containerList .buttons button {
+        width: 120px;
+        height: 25px;
+        margin-top: 1vh;
+        border-radius: 5px;
+        line-height: 12px;
+        margin-left: 1vh;
+        margin-right: 0;
+    }
+
+    .ordemServico .containerOrdemServico .containerList .buttons button a {
+        line-height: 0;
+        font-size: 10px;
+    }
+
+    .ordemServico .containerOrdemServico .containerList .List ul {
+        width: 95%;
+        margin: auto;
+    }
+
+    .ordemServico .containerOrdemServico .containerList .List ul .header span {
+        font-size: 9px;
+    }
+
+    .ordemServico .containerOrdemServico .containerList .List ul a li span {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 450px) {
+    .ordemServico .containerOrdemServico .containerList .buttons button {
+        height: 35px;
+    }
+
+    .ordemServico .containerOrdemServico .containerList .List ul .header span {
+        font-size: 8px;
+    }
+
+    .ordemServico .containerOrdemServico .containerList .List ul a li span {
+        font-size: 8px;
+    }
+}
