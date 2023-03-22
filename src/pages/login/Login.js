@@ -125,12 +125,7 @@ const Login=({loading,error,...props})=>{
                                             aria-hidden="true"
                                           />
                                         )}
-                                        {/* <ClipLoader
-                                        //css={override}
-                                        size={20}
-                                        color={"#123abc"}
-                                        loading={loading}
-                                        /> */}
+
                                     </button>
                                 </div>
                             </form>
