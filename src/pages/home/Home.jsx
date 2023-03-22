@@ -1,8 +1,9 @@
 import React from 'react'
 import './home.scss'
+import './responsive.css'
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import seta from './seta.png'
+import seta from './assets/seta.png'
 
 export default function Home() {
 
