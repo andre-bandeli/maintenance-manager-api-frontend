@@ -57,8 +57,9 @@ Nesse momento, estamos com nossa aplicação backend (server) disponivel em noss
 
 ## 📛 Page Speed
 
+![imagem](https://user-images.githubusercontent.com/87938869/226801482-67ca8c57-1fe1-4956-95bc-32f50ff7bbc5.png)
 
-## 🛠️ Features
+## :rocket: Features
 
 - Implementar regra de negócios estoque
 - Correção bug JWT token LocalStorage 
