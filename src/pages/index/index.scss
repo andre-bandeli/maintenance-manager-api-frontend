@@ -1,84 +1,252 @@
 .index {
     width: 100%;
-    height: 60vh;
+    height: auto;
 
-    .main {
+    .nav {
         width: 100%;
-        height: 60vh;
+        height: 10vh;
+
+
+        ul {
+            display: flex; 
+            width: 20%;
+            margin-left: 70%; margin-top: 50px;
+            border-radius: 5px;
+
+
+            li {
+                width: auto;
+                height: 80%;
+                margin: auto;
+                list-style: none;
+                color: whitesmoke;
+                font-weight: 400;
+
+                a {
+                    color: whitesmoke;
+                    text-decoration: none;
+                    font-weight: 300;
+                }
+                a:hover {
+                    color: rgb(41, 157, 252);
+                }
+            }
+        }
+    }
+
+    .header {
+        width: 100%;
+        height: 35vh;
+        margin: auto;
         display: flex;
 
-        .header {
-            width: 100%;
-            height: 40vh;
+        .text {
+            width: 80%;
+            height: 30%;
             margin: auto;
             
             h1 {
+                width: 100%;
+                font-size: 65px;
+                text-align: center;
                 color: whitesmoke;
-                margin-left: 20%;
-                margin-top: 70px;
+                font-weight: 300;
 
                 span {
-                    color: rgb(4, 197, 223);
+                    color: rgb(6, 173, 224);
                 }
             }
             h2 {
-                width: 70%;
+                width: 100%;
+                font-size: 25px;
+                letter-spacing: 5px;
+                text-align: center;
                 color: whitesmoke;
-                margin-left: 20%;
-                font-size: 20px;
-                font-weight: 200;
-                line-height: 30px;
+                font-weight: 300;
+
+             
             }
-          
-
-            .buttons {
-     
-                display: flex;
-                width: 65%;
-                margin: auto;
-
-                .btn-primary {
-                    width: 250px;
-                    height: 30px;
-                    margin-top: 2vh;
-                    margin-left: 5vh;
-                    background-color: rgb(2, 162, 224);
-                    border: none;
-                    color: whitesmoke;
-                    font-weight: bolder;
-                    font-size: 16px;
-                    cursor: pointer;
-                    z-index: 99;
-
-                    a {
-                        color: whitesmoke;
-                        text-decoration: none;
-                    }
-                }
-                .btn-secundary {
-                    width: 250px;
-                    height: 30px;
-                    margin-top: 2vh;
-                    margin-left: 2vh;
-                    background-color: rgb(47, 47, 48);
-                    border: 1px solid rgb(226, 226, 226);
-                    font-weight: bolder;
-                    font-size: 16px;
-                    cursor: pointer;
-                    z-index: 99;
-
-                    a {
-                        color: whitesmoke;
-                        text-decoration: none;
-                    }
-                    
-                }
-            }
-        }
-
-        .containerIndex {
-            width: 100%;
-            height: 50vh;
         }
     }
+    .containerCards {
+        width: 80%;
+        height: 20vh;
+        margin: auto;
+        margin-top: -50px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .box {
+            width: 23%;
+            height: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            background-color: rgba(243, 243, 243, 0.103);
+            border-radius: 5px;
+            box-shadow: rgba(116, 114, 114, 0.082) 0px 3px 8px;
+
+            h3 {
+                color: rgb(240, 237, 237);
+                font-size: 18px;
+                text-align: center;
+                font-weight: 300;
+                width: 90%;
+                margin: auto;
+            }
+        }
+        .box:hover {
+            background-color: rgba(65, 65, 65, 0.452);
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .index {
+    
+        .nav {
+          
+            ul {
+                width: 30%;
+                margin-left: 60%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1280px) and (max-height: 800px) {
+    .index {
+    
+        .containerCards {
+            height: 40vh;
+
+            .box {
+                height: 25vh;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .index {
+       height: 120vh;
+        .nav {
+          
+            ul {
+                width: 40%;
+                margin-left: 45%;
+            }
+        }
+    
+        .header {
+
+            height: 40vh;
+           
+            .text {
+
+                h1 {
+                    
+                    font-size: 55px;
+                }
+                h2 {
+                  font-size: 20px;
+                }
+            }
+        }
+
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .index {
+       height: auto;
+        .nav {
+    
+            ul {
+                width: 60%;
+                margin-left: 25%;
+    
+            }
+        }
+
+        .containerCards {
+
+            .box {
+               
+                width: 20%;
+                height: 10vh;
+    
+                h3 {
+                   font-size: 12px;
+                }
+            }
+
+        }
+    }
+    
+}
+
+
+@media (max-width: 550px) {
+    .index {
+       
+        .nav {
+    
+            ul {
+                width: 90%;
+                margin-left: 5%;
+    
+            }
+        }
+    
+        .containerCards {
+            margin-top: 0;
+            height: 30vh;
+    
+            .box {
+               
+                width: 45%;
+                height: 12vh;
+            }
+
+        }
+    }
+    
+}
+
+
+@media (max-width: 400px) {
+    .index {
+       
+        .containerCards {
+            height: 30vh;
+            margin-top: 100px;
+
+        }
+    }
+    
+}
+
+
+@media (max-width: 280px) {
+    .index {
+       
+
+        .header {
+
+            .text {
+
+                h1 {
+                    font-size: 30px;
+                }
+                h2 {
+                    font-size: 15px;
+                }
+            }
+        }
+
+    }
+    
 }

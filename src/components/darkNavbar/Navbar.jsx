@@ -17,7 +17,7 @@ export default function Navbar() {
         <div className="navSuperior">
             <ul>
                 <li>
-                <Link to="/home">Maintenance <span>Manager</span></Link>
+                <Link to="/">Maintenance <span>Manager</span></Link>
                 <Link to="/home" className='logo-responsive'>M <span>M</span></Link>
                 </li>
                 <li>
