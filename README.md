@@ -2,8 +2,7 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
-
-Esta é uma aplicação que está sendo desenvolvida para a Gestão e Planejamento de Manutenções. O frontend foi construído utilizando a biblioteca React, que permite a criação de interfaces de usuário interativas e responsivas. Já o backend foi implementado em Java com Spring Boot, oferecendo uma estrutura robusta para o gerenciamento dos dados e das operações de negócio. O banco de dados utilizado é o MySQL, que fornece confiabilidade e escalabilidade para a aplicação. Todos os testes foram realizados utilizando o framework Junit, garantindo a qualidade e a estabilidade do código. O resultado final é um sistema completo, intuitivo e seguro para gerenciar as manutenções de sua empresa.
+Esta é uma aplicação que está sendo desenvolvida para a Gestão e Planejamento de Manutenções. O frontend foi construído utilizando a biblioteca React, que permite a criação de interfaces de usuário interativas e responsivas. Já o backend foi implementado em Java com Spring Boot, oferecendo uma estrutura robusta para o gerenciamento dos dados e das operações de negócio. O banco de dados utilizado é o MySQL, que fornece confiabilidade e escalabilidade para a aplicação.
 
 ## Website Status
 ![BADGE](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)
@@ -36,6 +35,7 @@ docker:  20.10.17
 ### 🔧 Instalação
 
 Clone o repositório da aplicação de back-end [clique aqui](https://maintenance-manager-api-frontend.vercel.app/) e execute a aplicação. Caso necessário, leia o README para deploy local da aplicação spring boot. 
+
 ![BADGE](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 O seguinte resultado é esperado:
@@ -85,3 +85,5 @@ Controle de Estoque: gestão de estoque com dados de entrada, saída, saldos mí
 
 ---
 
+![imgg](https://user-images.githubusercontent.com/87938869/226804472-233a4b8f-6ad2-4225-bba8-0218f7e995f5.jpg)
+![img](https://user-images.githubusercontent.com/87938869/226804484-b367ce11-480d-466c-86bb-12df50e88c0f.jpg)
