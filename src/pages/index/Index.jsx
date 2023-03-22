@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../../components/footer/Footer'
 import './index.scss'
 import { Link } from "react-router-dom";
+import './responsive.css'
 
 export default function Index() {
   return (
