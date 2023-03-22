@@ -59,6 +59,18 @@ Nesse momento, estamos com nossa aplicação backend (server) disponivel em noss
 
 ![imagem](https://user-images.githubusercontent.com/87938869/226801482-67ca8c57-1fe1-4956-95bc-32f50ff7bbc5.png)
 
+## :memo: Regras de Negocio
+
+A aplicação busca resolver os principais desafios encontrados em ambientes industriais para a gestão de manutenção. Para isso, ela oferece soluções específicas para cada uma das partes envolvidas no processo. 
+
+Solicitações de Serviço: Quando alguma máquina para, por exemplo, alguma pessoa é chamada para verificar este problema. Neste momento, uma Solicitação de Serviço nasce. 
+Essa SS vai conter as principais informações do problema. 
+
+Ordens de Serviço: Após analise do problema, é estimado um tempo necessário para resolução, algum(a) técnico(a) responsável por reparar, uma data de abertura... O fato é: uma Ordem de Serviço HERDA da classe pai SolicitacaoServiço todas as informações iniciais e incrementa com novas informações. Geralmente uma SS posui relação 1-1 com OS.
+
+Controle de Estoque: gestão de estoque com dados de entrada, saída, saldos mínimos.
+
+
 ## :rocket: Features
 
 - Implementar regra de negócios estoque
